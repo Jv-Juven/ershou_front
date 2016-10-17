@@ -1,6 +1,6 @@
 <template>
-        <search-top></search-top><!-- 搜索页面头部 -->
-        <searchhot></searchhot><!-- 搜索热榜 -->
+        <search-top></search-top><!-- 搜索界面头部 -->
+        <searchhot></searchhot><!-- 搜索界面热门搜索 -->
    
    
 </template>

@@ -3,8 +3,8 @@
 </style>
 
 <template>
-     <account-header></account-header>
-     <account-contain></account-contain>
+     <account-header></account-header><!-- 个人账户头部 -->
+     <account-contain></account-contain><!-- 个人账户信息主体 -->
 </template>
 
 <script type="text/javascript">
