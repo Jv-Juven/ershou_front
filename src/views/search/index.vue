@@ -1,12 +1,12 @@
 <template>
-        <search-top></search-top>
-        <searchhot></searchhot>
+        <search-top></search-top><!-- 搜索页面头部 -->
+        <searchhot></searchhot><!-- 搜索热榜 -->
    
    
 </template>
 <script type="text/javascript">
-    import SearchTop from './components/searchTop'
-    import Searchhot from './components/searchhot'
+    import SearchTop from './components/search-top'
+    import Searchhot from './components/search-hot'
     
     export default {
         data() {

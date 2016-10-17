@@ -1,3 +1,33 @@
+<style lang="less" media="screen" scoped>
+	.searchhot {
+		width: 700px;
+		background: #fafafa;
+		margin: 60px auto;
+		
+
+	}
+	.stop{
+		font-size: 28px;
+		color: #ddd;
+		margin-bottom: 30px;
+	}
+	.scontain{
+		margin-bottom: 60px;
+		margin-right: 20px;
+		width: 220px;
+		height: 62px;
+		line-height: 40px;
+		background: #fff;
+		border:1px solid #999;
+		text-align: center;
+		font-size: 22px;
+	}
+
+	.clearright{
+		margin-right: 0px;
+	}
+</style>
+
 <template>
 	<section class="searchhot">
 		<div class="stop">大家都在搜</div>
@@ -16,33 +46,3 @@
 	}
 
 </script>
-<style lang="less" media="screen" scoped>
-
-.searchhot {
-	width: 700px;
-	background: #fafafa;
-	margin: 60px auto;
-	
-
-}
-.stop{
-	font-size: 28px;
-	color: #ddd;
-	margin-bottom: 30px;
-}
-  .scontain{
-margin-bottom: 60px;
-margin-right: 20px;
-width: 220px;
-height: 62px;
-line-height: 40px;
-background: #fff;
-border:1px solid #999;
-text-align: center;
-font-size: 22px;
-}
-
- .clearright{
-margin-right: 0px;
-}
-</style>

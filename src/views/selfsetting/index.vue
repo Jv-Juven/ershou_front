@@ -3,20 +3,20 @@
 </style>
 
 <template>
-     <mynote-header></mynote-header>
-     <setting-contain></setting-contain>
+     <setting-header></setting-header><!-- 个人设置头部 -->
+     <setting-contain></setting-contain><!-- 个人设置主体 -->
 </template>
 
 <script type="text/javascript">
-     import MynoteHeader from "./components/header"
-     import SettingContain from "./components/settingcontain"
+     import SettingHeader from "./components/header"
+     import SettingContain from "./components/setting-contain"
         export default {
             data() {
                 return {}
             },
           
             components: {
-                MynoteHeader,
+                SettingHeader,
                 SettingContain,
             },
             

@@ -9,7 +9,7 @@
 
 <script type="text/javascript">
      import AccountHeader from "./components/header"
-     import AccountContain from "./components/accountcontain"
+     import AccountContain from "./components/account-contain"
         export default {
             data() {
                 return {}
