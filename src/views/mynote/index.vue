@@ -3,10 +3,14 @@
 </style>
 
 <template>
-    <mynote-header></mynote-header><!-- 我的帖子头部 -->
-    <mynote-record></mynote-record><!-- 我的帖子记录 -->
-    <mynote-list></mynote-list><!-- 我的帖子列表 -->
-    <mynote-footer></mynote-footer><!-- 我的帖子尾部 -->
+    <!-- 我的帖子头部 -->
+    <mynote-header></mynote-header>
+    <!-- 我的帖子记录 -->
+    <mynote-record></mynote-record>
+    <!-- 我的帖子列表 -->
+    <mynote-list></mynote-list>
+    <!-- 我的帖子尾部 -->
+    <mynote-footer></mynote-footer>
 </template>
 
 <script type="text/javascript">
@@ -18,16 +22,14 @@
             data() {
                 return {}
             },
-          
+
             components: {
                MynoteHeader,
                MynoteRecord,
                MynoteList,
                MynoteFooter,
             },
-            
+
         }
 
 </script>
-
-
