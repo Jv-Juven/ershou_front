@@ -16,16 +16,25 @@
             data() {
                 return {}
             },
-          
             components: {
-               
+
                 TitleHeader,
                 Indexsearch,
                 Indexcontainer,
             },
-            
+            route: {
+                data() {
+                    console.log("router--->data");
+                }
+            },
+            ready() {
+                // let resource = this.$resource("/basic/basic/getCity");
+                // resource.get().then((res) => {
+                //     console.log(res);
+                // }, (res) => {
+                //     throw res
+                // });
+            }
         }
 
 </script>
-
-
