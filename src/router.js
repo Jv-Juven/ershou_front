@@ -4,7 +4,9 @@ import Publish from "views/publishnote"
 import Mynote from "views/mynote"
 import Setting from "views/selfsetting"
 import Account from "views/account"
-
+import Login from "views/login"
+import Register from "views/register"
+import Integration from "views/integration"
 export default function (router) {
     router.map({
         "/": {
@@ -24,6 +26,15 @@ export default function (router) {
         },
         "/account":{
             component:Account
+        },
+        "/login":{
+            component:Login
+        },
+         "/register":{
+            component:Register
+        },
+         "/integration":{
+            component:Integration
         },
         "*": {
             component: Index

@@ -3,8 +3,10 @@
 </style>
 
 <template>
-     <setting-header></setting-header><!-- 个人设置头部 -->
-     <setting-contain></setting-contain><!-- 个人设置主体 -->
+     <setting-header></setting-header>
+     <!-- 个人设置头部 -->
+     <setting-contain></setting-contain>
+     <!-- 个人设置主体 -->
 </template>
 
 <script type="text/javascript">
