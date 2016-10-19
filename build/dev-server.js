@@ -49,6 +49,13 @@ compiler.plugin('compilation', function (compilation) {
 /**
  * proxy 代理设置
  * 关于代理设置的说明： http://www.imooc.com/wiki/detail/id/3457
+ * github地址及使用教程：https://github.com/chimurai/http-proxy-middleware
+ * example： proxyTable = {
+ *     '/api': 'http://example.com',
+ *     '/exp': {
+ *           target: 'http://example.com'
+ *     }
+ * }
  */
 Object.keys(proxyTable).forEach(function (context) {
 	var options = proxyTable[context]
