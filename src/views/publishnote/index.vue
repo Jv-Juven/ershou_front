@@ -26,7 +26,12 @@
     import FooterButton from "./components/footer-button"
         export default {
             data() {
-                return {}
+                return {
+                    // showdiv:{
+                    //     one:true,
+                    //     two:false,
+                    // }
+                }
             },
           
             components: {
