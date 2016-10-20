@@ -56,8 +56,8 @@
 <template lang="html">
    <header class="publish-header">
        <span class="header-left">&lt;</span>
-       <span class="header-right">注册</span>
-       <input type="button" value="登录" class="login-btn"></input>
+       <span class="header-right">我的积分</span>
+       <input type="button" value="首页" class="login-btn"></input>
    </header>
 </template>
 

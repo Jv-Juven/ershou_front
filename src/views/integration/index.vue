@@ -3,23 +3,23 @@
 </style>
 
 <template>
-     <register-header></register-header>
-     <!-- 注册界面头部 -->
-     <register-contain></register-contain>
-     <!-- 注册主体部分 -->
+     <integration-header></integration-header>
+     <!-- 积分界面头部 -->
+     <integration-contain></integration-contain>
+     <!-- 积分界面主体部分 -->
 </template>
 
 <script type="text/javascript">
-     import RegisterHeader from "./components/header"
-     import RegisterContain from "./components/register-contain"
+     import IntegrationHeader from "./components/header"
+     import IntegrationContain from "./components/integration-contain"
         export default {
             data() {
                 return {}
             },
           
             components: {
-                RegisterHeader,
-                RegisterContain,
+                IntegrationHeader,
+                IntegrationContain,
             },
             
         }
