@@ -84,7 +84,7 @@
         color:red;
         font-size: 20px;
         margin-left: 30%;
-        cursor: pointer;
+        
     }
 </style>
 
@@ -182,7 +182,7 @@
                                 if (this.password!='请输入密码' && this.passok==false &&this.same==true &&this.agree==true) {
                                 this.able=false;
                                 this.style.opacity='1';
-                        }
+                           }
                             }
                         }else{
                             this.email='请输入邮箱'
