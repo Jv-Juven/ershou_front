@@ -1,11 +1,11 @@
 <template lang="html">
     <section class="container">
         <div class="input-box">
-            <span>邮&nbsp;&nbsp;&nbsp;&nbsp;箱：</span><input type="text"  id="email"  @keyup="checkEmail" @blur="checkEmail" @focus="resetEmail" v-model='email'></input>
+            <span>邮&nbsp;&nbsp;箱：</span><input type="text"  id="email"  @keyup="checkEmail" @blur="checkEmail" @focus="resetEmail" v-model='email'></input>
         </div>
         <div v-show='ok' class="err">{{message}}</div>
         <div class="input-box">
-            <span>密&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input :type="text" @keyup="checkPassword" @blur="checkPassword" @focus="resetPassword" v-model='password'   ></input>
+            <span>密&nbsp;&nbsp;码：</span><input :type="text" @keyup="checkPassword" @blur="checkPassword" @focus="resetPassword" v-model='password'   ></input>
         </div>
         <div v-show='passok' class="err">{{passmessage}}</div>
         <div class="input-box">
@@ -18,7 +18,7 @@
         </div>
         <div class="register-box">
              <input type="button" class="register-btn" value="注册" :disabled="able" :style='style' @click="dad"></input>
-            
+
         </div>
     </section>
 </template>
@@ -90,16 +90,16 @@
                             else{
                                 this.ok=false;
                                 if (this.password!='请输入密码' && this.passok==false &&this.same==true &&this.agree==true) {
-                                this.able=false;
-                                this.style.opacity='1';
-                           }
+                                    this.able=false;
+                                    this.style.opacity='1';
+                                }
                             }
                         }else{
                             this.email='请输入邮箱'
                             this.able='disabled';
                                 this.style.opacity='0.3';
                         }
-                        
+
                     },
                     checkPassword:function(){
                         var reg=/^[a-zA-Z0-9_-]{6,9}$/;
@@ -114,16 +114,16 @@
                                 this.passok=false;
                                 if (this.checkword==this.password) {
                                     this.same=true;
-                                   
+
                                 }else{
                                     this.same=false;
                                     this.able='disabled';
                                 this.style.opacity='0.3';
                                 }
-                                 if (this.email!='请输入邮箱' && this.ok==false &&this.same==true &&this.agree==true) {
-                                this.able=false;
-                                this.style.opacity='1';
-                        }
+                                if (this.email!='请输入邮箱' && this.ok==false &&this.same==true &&this.agree==true) {
+                                    this.able=false;
+                                    this.style.opacity='1';
+                                }
                             }
                         }else{
                             this.text='text';
@@ -133,7 +133,7 @@
                         }
                     },
                     checkAgain:function(){
-                        
+
                         if (this.checkword !='') {
                             if (this.checkword!=this.password) {
                                 this.same=false;
