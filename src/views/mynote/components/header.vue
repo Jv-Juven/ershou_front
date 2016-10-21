@@ -1,3 +1,27 @@
+<template>
+  <header class="searchtop">
+	<div class="left">
+	  <span>&lt;</span>
+	</div>
+	<div class="right">
+	  <input type="text" placeholder="请输入关键字" class="search-box"></input>
+	  <input type="button" value="搜索" class="search-btn"></input>
+	</div>
+  </header>
+</template>
+<script type="text/javascript">
+	 import * as actions from 'data/actions'
+	export default {
+		vuex: {
+			actions
+		},
+		data() {
+			return {}
+		},
+		
+	}
+</script>
+
 <style lang="less" media="screen" scoped>
 	.searchtop{
 		width: 100%;
@@ -58,26 +82,3 @@
    	}
 </style>
 
-<template>
-  <header class="searchtop">
-	<div class="left">
-	  <span>&lt;</span>
-	</div>
-	<div class="right">
-	  <input type="text" placeholder="请输入关键字" class="search-box"></input>
-	  <input type="button" value="搜索" class="search-btn"></input>
-	</div>
-  </header>
-</template>
-<script type="text/javascript">
-	 import * as actions from 'data/actions'
-	export default {
-		vuex: {
-			actions
-		},
-		data() {
-			return {}
-		},
-		
-	}
-</script>

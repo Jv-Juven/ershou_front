@@ -1,3 +1,22 @@
+<template>
+	<section class="searchhot">
+		<div class="stop">大家都在搜</div>
+		<div >
+			<input type="button" class="scontain" value="手机"></input><input type="button" class="scontain" value="台灯"></input><input type="button" class="scontain clearright" value="自行车"></input><input type="button" class="scontain" value="考研资料" ></input><input type="button" class="scontain" value="鞋子"></input><input type="button" class="scontain clearright" value="平板"></input><input type="button" class="scontain" value="篮球" ></input><input type="button" class="scontain" value="收纳盒"></input><input type="button" class="scontain clearright" value="包"></input>
+		</div>
+	</section>
+</template>
+
+<script type="text/javascript">
+	 
+	export default {
+		data() {
+			return {}
+		},
+	}
+
+</script>
+
 <style lang="less" media="screen" scoped>
 	.searchhot {
 		width: 700px;
@@ -28,21 +47,3 @@
 	}
 </style>
 
-<template>
-	<section class="searchhot">
-		<div class="stop">大家都在搜</div>
-		<div >
-			<input type="button" class="scontain" value="手机"></input><input type="button" class="scontain" value="台灯"></input><input type="button" class="scontain clearright" value="自行车"></input><input type="button" class="scontain" value="考研资料" ></input><input type="button" class="scontain" value="鞋子"></input><input type="button" class="scontain clearright" value="平板"></input><input type="button" class="scontain" value="篮球" ></input><input type="button" class="scontain" value="收纳盒"></input><input type="button" class="scontain clearright" value="包"></input>
-		</div>
-	</section>
-</template>
-
-<script type="text/javascript">
-	 
-	export default {
-		data() {
-			return {}
-		},
-	}
-
-</script>

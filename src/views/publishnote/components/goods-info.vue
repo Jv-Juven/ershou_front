@@ -1,3 +1,150 @@
+<template lang="html">
+   <div class="goodsinfo" v-show='checkone'>
+       <div class="caption">
+           <div class="caption-left">
+               <span>标题</span>
+           </div>
+           <div class="caption-right">
+               <textarea placeholder="帖子标题"></textarea>
+           </div>
+       </div>
+       <div class="price">
+           <div class="price-left">
+               <span>价格</span>
+           </div>
+           <div class="price-right">
+               <input type="text" placeholder="请输入大于0的数字"></input>
+               <span>元</span>
+           </div>
+       </div>
+       <div class="description">
+           <div class="description-left">
+               <span>描述(选填)</span>
+               
+           </div>
+           <div class="description-right">
+               <textarea placeholder="请输入描述内容"></textarea>
+           </div>
+       </div>
+   </div>
+
+   <div class="goodsinfo" v-show='checktwo'>
+       <div class="caption">
+           <div class="caption-left">
+               <span>标题</span>
+           </div>
+           <div class="caption-right">
+               <textarea placeholder="希望购买商品的标题"></textarea>
+           </div>
+       </div>
+       <div class="price">
+           <div class="price-left">
+               <span>价格</span>
+           </div>
+           <div class="price-right">
+               <input type="text" placeholder="可以接受价格范围"></input>
+               <span>元</span>
+           </div>
+       </div>
+       <div class="description">
+           <div class="description-left">
+               <span>描述(选填)</span>
+               
+           </div>
+           <div class="description-right">
+               <textarea placeholder="希望购买商品的描述"></textarea>
+           </div>
+       </div>
+   </div>
+
+   <div class="goodsinfo" v-show='checkthree'>
+       <div class="caption">
+           <div class="caption-left">
+               <span>标题</span>
+           </div>
+           <div class="caption-right">
+               <textarea placeholder="帖子标题"></textarea>
+           </div>
+       </div>
+       <div class="price">
+           <div class="price-left">
+               <span>积分</span>
+           </div>
+           <div class="price-right">
+               <input type="text" placeholder="请输入大于0的数字"></input>
+               <span>分</span>
+           </div>
+       </div>
+       <div class="description">
+           <div class="description-left">
+               <span>描述(选填)</span>
+               
+           </div>
+           <div class="description-right">
+               <textarea placeholder="请输入描述内容"></textarea>
+           </div>
+       </div>
+   </div>
+
+   <div class="goodsinfo" v-show='checkfour'>
+       <div class="caption">
+           <div class="caption-left">
+               <span>标题</span>
+           </div>
+           <div class="caption-right">
+               <textarea placeholder="帖子标题"></textarea>
+           </div>
+       </div>
+       <div class="price">
+           <div class="price-left">
+               <span>积分</span>
+           </div>
+           <div class="price-right">
+               <input type="text" placeholder="请输入能接受花费积分数量"></input>
+               <span>分</span>
+           </div>
+       </div>
+       <div class="description">
+           <div class="description-left">
+               <span>描述(选填)</span>
+               
+           </div>
+           <div class="description-right">
+               <textarea placeholder="请输入希望购买商品描述"></textarea>
+           </div>
+       </div>
+   </div>
+</template>
+
+<script type="text/javascript">
+        export default {
+            data() {
+                    return {}
+                },
+                vuex:{
+                    getters:{
+                    checkone:function(state){
+                        return state.checkone
+                    },
+                    checktwo:function(state){
+                        return state.checktwo
+                    },
+                    checkthree:function(state){
+                        return state.checkthree
+                    },
+                    checkfour:function(state){
+                        return state.checkfour
+                    },
+                },
+                },
+                computed: {},
+                // mounted() {},
+                methods: {},
+                components: {}
+        }
+
+</script>
+
 <style lang="less" media="screen" scoped>
     .goodsinfo{
         width: 100%;
@@ -115,46 +262,3 @@
 
 </style>
 
-<template lang="html">
-   <div class="goodsinfo">
-       <div class="caption">
-           <div class="caption-left">
-               <span>标题</span>
-           </div>
-           <div class="caption-right">
-               <textarea placeholder="帖子标题"></textarea>
-           </div>
-       </div>
-       <div class="price">
-           <div class="price-left">
-               <span>价格</span>
-           </div>
-           <div class="price-right">
-               <input type="text" placeholder="请输入大于0的数字"></input>
-               <span>元</span>
-           </div>
-       </div>
-       <div class="description">
-           <div class="description-left">
-               <span>描述(选填)</span>
-               
-           </div>
-           <div class="description-right">
-               <textarea placeholder="请输入描述内容"></textarea>
-           </div>
-       </div>
-   </div>
-</template>
-
-<script type="text/javascript">
-        export default {
-            data() {
-                    return {}
-                },
-                computed: {},
-                // mounted() {},
-                methods: {},
-                components: {}
-        }
-
-</script>

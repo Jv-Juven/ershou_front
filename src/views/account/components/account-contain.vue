@@ -1,119 +1,3 @@
-<style lang="less" media="screen" scoped>
-   .top-p{
-        margin-top: 34px;
-        text-indent: 30px;
-        color:#55bb22;
-        font-size: 30px;
-        width: 100%;
-        border-bottom: 1px solid #999;
-   }
-   .basic-info{
-        p{
-            margin-top: 34px;
-            text-indent: 26px;
-            color:#55bb22;
-            font-size: 30px;
-            width: 100%;
-            border-bottom: 1px solid #999;
-            span{
-                color:#000;
-        }
-        }
-   }
-   .detail-info{
-        p{
-            margin-top: 34px;
-            text-indent: 26px;
-            color:#55bb22;
-            font-size: 30px;
-            width: 100%;
-            border-bottom: 1px solid #999;
-            input{
-                width: 40%;
-                height: 40px;
-                font-size: 22px;
-                border:none;
-            }
-        }
-        label{
-            span{
-                display: inline-block;
-                height: 40px;
-                line-height: 40px;
-                font-size: 20px;
-                color:red;
-                
-            }
-            input{
-                width: 20px;
-                height: 20px;
-                
-                margin-top: 30px;
-                margin-left: 30px;
-            }
-
-        }
-        
-
-   }
-   .change-password{
-        .box{
-            
-            width: 100%;
-            height: 60px;
-            margin-left: 30px;
-            color: red;
-            font-size: 36px;
-            span{
-                display: inline-block;
-                width: 30%;
-            }
-            input{
-                width: 60%;
-                height: 40px;
-                font-size: 22px;
-
-                // &:focus{
-                //     outline: 0px;
-                // }
-            }
-            
-        }
-        
-        .err{
-                color:red;
-                
-                width: 60%;
-                height: 50px;
-                font-size: 20px;
-                margin-left: 30%;
-                text-indent: 30px;
-        
-            }
-         
-        .button{
-            width: 100%;
-            margin-left: 0px;
-            .modify-btn{
-                width: 80%;
-                height: 60px;
-                background: #55bb22;
-                line-height: 60px;
-                color: #fff;
-                font-size: 30px;
-                text-align: center;
-                margin: 30px auto;
-
-                display: block;
-            }
-        }
-
-   }
-   
-
-  
-</style>
-
 <template lang="html">
     <p class="top-p">账号：</p>
     <div class="basic-info">
@@ -316,3 +200,120 @@
         }
 
 </script>
+
+<style lang="less" media="screen" scoped>
+   .top-p{
+        margin-top: 34px;
+        text-indent: 30px;
+        color:#55bb22;
+        font-size: 30px;
+        width: 100%;
+        border-bottom: 1px solid #999;
+   }
+   .basic-info{
+        p{
+            margin-top: 34px;
+            text-indent: 26px;
+            color:#55bb22;
+            font-size: 30px;
+            width: 100%;
+            border-bottom: 1px solid #999;
+            span{
+                color:#000;
+        }
+        }
+   }
+   .detail-info{
+        p{
+            margin-top: 34px;
+            text-indent: 26px;
+            color:#55bb22;
+            font-size: 30px;
+            width: 100%;
+            border-bottom: 1px solid #999;
+            input{
+                width: 40%;
+                height: 40px;
+                font-size: 22px;
+                border:none;
+            }
+        }
+        label{
+            span{
+                display: inline-block;
+                height: 40px;
+                line-height: 40px;
+                font-size: 20px;
+                color:red;
+                
+            }
+            input{
+                width: 20px;
+                height: 20px;
+                
+                margin-top: 30px;
+                margin-left: 30px;
+            }
+
+        }
+        
+
+   }
+   .change-password{
+        .box{
+            
+            width: 100%;
+            height: 60px;
+            margin-left: 30px;
+            color: red;
+            font-size: 36px;
+            span{
+                display: inline-block;
+                width: 30%;
+            }
+            input{
+                width: 60%;
+                height: 40px;
+                font-size: 22px;
+
+                // &:focus{
+                //     outline: 0px;
+                // }
+            }
+            
+        }
+        
+        .err{
+                color:red;
+                
+                width: 60%;
+                height: 50px;
+                font-size: 20px;
+                margin-left: 30%;
+                text-indent: 30px;
+        
+            }
+         
+        .button{
+            width: 100%;
+            margin-left: 0px;
+            .modify-btn{
+                width: 80%;
+                height: 60px;
+                background: #55bb22;
+                line-height: 60px;
+                color: #fff;
+                font-size: 30px;
+                text-align: center;
+                margin: 30px auto;
+
+                display: block;
+            }
+        }
+
+   }
+   
+
+  
+</style>
+

@@ -6,3 +6,6 @@ const pages = store.state.pages; // pages 应与 store.modules 中的名字相�
 export const pageCallFuncs = () => {
     return pages.pageFuncs;
 }
+// export function getCount(state){
+// 	return state.count
+// }

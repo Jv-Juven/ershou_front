@@ -1,65 +1,3 @@
-<style lang="less" media="screen" scoped>
-    .record{
-    	width: 100%;
-    	height: 200px;
-    	border:1px solid #999;
-    	.record-top{
-    		clear: both;
-    		
-    		height: 100px;
-    		line-height: 100px;
-    		font-size: 30px;
-    		color: #55bb22;
-    		text-indent: 30px;
-    		p{
-    			font-size: 30px;
-    			font-weight: bold;
-    			float: left;
-    			span{
-    				font-size: 20px;
-    				color: #999;
-    			}
-
-    		}
-
-    		.publish-note{
-
-    			width: 80px;
-    			height: 40px;
-    			font-size: 22px;
-    			text-align: center;
-    			background-color: #55bb22;
-    			color:#fff;
-    			margin-top: 30px;
-    			float: right;
-    			margin-right: 30px;
-
-    		}
-    		
-    	}
-    	.record-bottom{
-    		clear: both;
-    		height: 100px;
-    		line-height: 100px;
-    		font-size: 26px;
-    		color: #55bb22;
-    		text-indent: 30px;
-    		.checkall{
-    			width: 80px;
-    			height: 40px;
-    			font-size: 22px;
-    			text-align: center;
-    			background-color: #55bb22;
-    			color:#fff;
-    			margin-top: 30px;
-    			float: right;
-    			margin-right: 30px;
-    		}
-    		
-    	}
-    }
-</style>
-
 <template>
     <div class="record">
     	<div class="record-top">
@@ -85,3 +23,66 @@
 		
 	}
 </script>
+
+<style lang="less" media="screen" scoped>
+    .record{
+        width: 100%;
+        height: 200px;
+        border:1px solid #999;
+        .record-top{
+            clear: both;
+            
+            height: 100px;
+            line-height: 100px;
+            font-size: 30px;
+            color: #55bb22;
+            text-indent: 30px;
+            p{
+                font-size: 30px;
+                font-weight: bold;
+                float: left;
+                span{
+                    font-size: 20px;
+                    color: #999;
+                }
+
+            }
+
+            .publish-note{
+
+                width: 80px;
+                height: 40px;
+                font-size: 22px;
+                text-align: center;
+                background-color: #55bb22;
+                color:#fff;
+                margin-top: 30px;
+                float: right;
+                margin-right: 30px;
+
+            }
+            
+        }
+        .record-bottom{
+            clear: both;
+            height: 100px;
+            line-height: 100px;
+            font-size: 26px;
+            color: #55bb22;
+            text-indent: 30px;
+            .checkall{
+                width: 80px;
+                height: 40px;
+                font-size: 22px;
+                text-align: center;
+                background-color: #55bb22;
+                color:#fff;
+                margin-top: 30px;
+                float: right;
+                margin-right: 30px;
+            }
+            
+        }
+    }
+</style>
+

@@ -1,7 +1,3 @@
-<style lang="less" media="screen">
-
-</style>
-
 <template>
      <login-header></login-header>
      <!-- 登录界面头部 -->
@@ -26,5 +22,9 @@
         }
 
 </script>
+
+<style lang="less" media="screen">
+
+</style>
 
 

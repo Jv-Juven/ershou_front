@@ -1,7 +1,3 @@
-<style lang="less" media="screen">
-
-</style>
-
 <template>
      <account-header></account-header>
      <!-- 个人账户头部 -->
@@ -25,5 +21,9 @@
         }
 
 </script>
+
+<style lang="less" media="screen">
+
+</style>
 
 

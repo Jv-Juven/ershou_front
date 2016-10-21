@@ -1,36 +1,3 @@
-<style lang="less" media="screen">
-    .searchbox{
-        width: 80%;
-        height: 60px;
-        margin: 20px auto;
-        
-     }
-    .search-select{
-        border:none;
-        margin-left: 30px;
-        font-size: 20px;
-     }
-    .search-select:focus{outline:0;}
-    .radius (@radius: 5px) {
-        border-radius: @radius;
-        -o-border-radius: @radius;
-        -ms-border-radius: @radius;
-        -moz-border-radius: @radius;
-        -webkit-border-radius: @radius;
-      }  
-    .searchtext{
-        width: 70%;
-        height: 40px;
-        line-height: 40px;
-        .radius(30px);
-        font-size: 28px;
-        padding-left: 20px;
-      }
-    .searchtext:focus{
-        outline:0;
-    }
-</style>
-
 <template lang="html">
    <section class="searchbox">
         <div>
@@ -63,3 +30,36 @@
         }
 
 </script>
+
+<style lang="less" media="screen">
+    .searchbox{
+        width: 80%;
+        height: 60px;
+        margin: 20px auto;
+        
+     }
+    .search-select{
+        border:none;
+        margin-left: 30px;
+        font-size: 20px;
+     }
+    .search-select:focus{outline:0;}
+    .radius (@radius: 5px) {
+        border-radius: @radius;
+        -o-border-radius: @radius;
+        -ms-border-radius: @radius;
+        -moz-border-radius: @radius;
+        -webkit-border-radius: @radius;
+      }  
+    .searchtext{
+        width: 70%;
+        height: 40px;
+        line-height: 40px;
+        .radius(30px);
+        font-size: 28px;
+        padding-left: 20px;
+    }
+    .searchtext:focus{
+        outline:0;
+    }
+</style>

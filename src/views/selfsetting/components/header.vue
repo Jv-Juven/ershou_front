@@ -1,3 +1,24 @@
+<template lang="html">
+   <header class="publish-header">
+       <span class="header-left">&lt;</span>
+       <span class="header-right">个人设置</span>
+       <input type="button" value="首页" class="search-btn"></input>
+   </header>
+</template>
+
+<script type="text/javascript">
+        export default {
+            data() {
+                    return {}
+                },
+                computed: {},
+                // mounted() {},
+                methods: {},
+                components: {}
+        }
+
+</script>
+
 <style lang="less" media="screen" scoped>
     .publish-header{
         height: 120px;
@@ -53,23 +74,3 @@
     }
 </style>
 
-<template lang="html">
-   <header class="publish-header">
-       <span class="header-left">&lt;</span>
-       <span class="header-right">个人设置</span>
-       <input type="button" value="首页" class="search-btn"></input>
-   </header>
-</template>
-
-<script type="text/javascript">
-        export default {
-            data() {
-                    return {}
-                },
-                computed: {},
-                // mounted() {},
-                methods: {},
-                components: {}
-        }
-
-</script>

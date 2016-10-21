@@ -1,3 +1,56 @@
+<template>
+    <div class="recordlist">
+    	<div class="list">
+            <div class="list-left">
+                <img src="../../../../static/image/phone/iphone6s.png">
+            </div>   
+            <div class="list-middle">
+                <span>iphone6s转让<br>3000元<br>广中医</span>
+                <div class="date">2016-10-16</div>
+            </div>
+            <div class="list-right">
+                <input type="checkbox" ></input>
+            </div>
+        </div>
+        <div class="list" style="border-top:0px">
+            <div class="list-left">
+                <img src="../../../../static/image/phone/iphone6s.png">
+            </div>   
+            <div class="list-middle">
+                <span>iphone6s转让<br>3000元<br>广中医</span>
+                <div class="date">2016-10-16</div>
+            </div>
+            <div class="list-right">
+                <input type="checkbox" ></input>
+            </div>
+        </div><div class="list" style="border-top:0px">
+            <div class="list-left">
+                <img src="../../../../static/image/phone/iphone6s.png">
+            </div>   
+            <div class="list-middle">
+                <span>iphone6s转让<br>3000元<br>广中医</span>
+                <div class="date">2016-10-16</div>
+            </div>
+            <div class="list-right">
+                <input type="checkbox" ></input>
+            </div>
+        </div>
+    </div>
+
+</template>
+<script type="text/javascript">
+	 import * as actions from 'data/actions'
+	export default {
+		vuex: {
+			actions
+		},
+		data() {
+			return {}
+		},
+		
+	}
+</script>
+
 <style lang="less" media="screen" scoped>
     .recordlist{
         width: 100%;
@@ -59,55 +112,3 @@
     }
 </style>
 
-<template>
-    <div class="recordlist">
-    	<div class="list">
-            <div class="list-left">
-                <img src="../../../../static/image/phone/iphone6s.png">
-            </div>   
-            <div class="list-middle">
-                <span>iphone6s转让<br>3000元<br>广中医</span>
-                <div class="date">2016-10-16</div>
-            </div>
-            <div class="list-right">
-                <input type="checkbox" ></input>
-            </div>
-        </div>
-        <div class="list" style="border-top:0px">
-            <div class="list-left">
-                <img src="../../../../static/image/phone/iphone6s.png">
-            </div>   
-            <div class="list-middle">
-                <span>iphone6s转让<br>3000元<br>广中医</span>
-                <div class="date">2016-10-16</div>
-            </div>
-            <div class="list-right">
-                <input type="checkbox" ></input>
-            </div>
-        </div><div class="list" style="border-top:0px">
-            <div class="list-left">
-                <img src="../../../../static/image/phone/iphone6s.png">
-            </div>   
-            <div class="list-middle">
-                <span>iphone6s转让<br>3000元<br>广中医</span>
-                <div class="date">2016-10-16</div>
-            </div>
-            <div class="list-right">
-                <input type="checkbox" ></input>
-            </div>
-        </div>
-    </div>
-
-</template>
-<script type="text/javascript">
-	 import * as actions from 'data/actions'
-	export default {
-		vuex: {
-			actions
-		},
-		data() {
-			return {}
-		},
-		
-	}
-</script>

@@ -1,80 +1,3 @@
-<style lang="less" media="screen" scoped>
-    .container{
-        width: 80%;
-        height: 300px;
-        magin:30px auto;
-        
-    }
-    .input-box{
-        margin-top: 20px;
-        span{
-            display: inline-block;
-            width: 30%;
-            height: 60px;
-            font-size: 30px;
-            color:#55bb22;
-            text-indent: 30px;
-        }
-        input{
-
-            width: 60%;
-            height: 60px;
-            font-size: 26px;
-            border:none;
-            border-bottom: 1px solid #ccc;
-            &:focus{
-                outline: 0px;
-            }
-        }
-        
-    
-    }
-    .login-box{
-            .login-btn{
-            width: 100%;
-            height: 60px;
-            background: #55bb22;
-            line-height: 60px;
-            color: #fff;
-            font-size: 30px;
-            text-align: center;
-            margin: 30px auto;
-            display: block;
-            }
-            a{
-                color:blue;
-                text-decoration: none;
-            }
-            .left{
-                display: inline-block;
-                width: 40%;
-                height: 30px;
-                line-height: 30px;
-                font-size: 22px;
-                margin-left: 10px;
-            }
-            .right{
-                display: inline-block;
-                
-                height: 30px;
-                line-height: 30px;
-                font-size: 22px;
-                float: right;
-                margin-right: 10px;
-
-            }
-
-    }
-    .err{
-        width: 60%;
-        color:red;
-        font-size: 20px;
-        margin-left: 30%;
-        cursor: pointer;
-    }
-
-</style>
-
 <template lang="html">
     <from class="container">
         <div class="input-box">
@@ -189,3 +112,81 @@
         }
 
 </script>
+
+<style lang="less" media="screen" scoped>
+    .container{
+        width: 80%;
+        height: 300px;
+        magin:30px auto;
+        
+    }
+    .input-box{
+        margin-top: 20px;
+        span{
+            display: inline-block;
+            width: 30%;
+            height: 60px;
+            font-size: 30px;
+            color:#55bb22;
+            text-indent: 30px;
+        }
+        input{
+
+            width: 60%;
+            height: 60px;
+            font-size: 26px;
+            border:none;
+            border-bottom: 1px solid #ccc;
+            &:focus{
+                outline: 0px;
+            }
+        }
+        
+    
+    }
+    .login-box{
+            .login-btn{
+            width: 100%;
+            height: 60px;
+            background: #55bb22;
+            line-height: 60px;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            margin: 30px auto;
+            display: block;
+            }
+            a{
+                color:blue;
+                text-decoration: none;
+            }
+            .left{
+                display: inline-block;
+                width: 40%;
+                height: 30px;
+                line-height: 30px;
+                font-size: 22px;
+                margin-left: 10px;
+            }
+            .right{
+                display: inline-block;
+                
+                height: 30px;
+                line-height: 30px;
+                font-size: 22px;
+                float: right;
+                margin-right: 10px;
+
+            }
+
+    }
+    .err{
+        width: 60%;
+        color:red;
+        font-size: 20px;
+        margin-left: 30%;
+        cursor: pointer;
+    }
+
+</style>
+

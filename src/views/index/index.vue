@@ -1,20 +1,16 @@
-<style lang="less" media="screen">
-
-</style>
-
 <template>
     <title-header></title-header>
     <!-- 首页头部 -->
-    <indexsearch></indexsearch>
+    <index-search></index-search>
     <!-- 首页搜索框 -->
-    <indexcontainer></indexcontainer>
+    <index-container></index-container>
     <!-- 首页主题功能部分 -->
 </template>
 
 <script type="text/javascript">
     import TitleHeader from "./components/header.vue"
-    import Indexsearch from "./components/index-search"
-    import Indexcontainer from "./components/index-container"
+    import IndexSearch from "./components/index-search"
+    import IndexContainer from "./components/index-container"
         export default {
             data() {
                 return {}
@@ -22,12 +18,12 @@
             components: {
 
                 TitleHeader,
-                Indexsearch,
-                Indexcontainer,
+                IndexSearch,
+                IndexContainer,
             },
             route: {
                 data() {
-                    console.log("router--->data");
+                   console.log("router--->data");
                 }
             },
             ready() {
@@ -41,3 +37,7 @@
         }
 
 </script>
+
+<style lang="less" media="screen">
+
+</style>

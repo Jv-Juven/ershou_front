@@ -1,7 +1,3 @@
-<style lang="less" media="screen">
-
-</style>
-
 <template>
     <!-- 我的帖子头部 -->
     <mynote-header></mynote-header>
@@ -30,3 +26,8 @@
             },
         }
 </script>
+
+<style lang="less" media="screen">
+
+</style>
+

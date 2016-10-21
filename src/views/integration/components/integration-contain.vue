@@ -1,3 +1,51 @@
+<template lang="html">
+    <section class="container">
+        <div class="remain">剩余积分<span>{{remaining}}</span></div>
+        <div @click='change'>
+            <input type="checkbox" id="recharge" class="recharge"></input>
+            <label for="recharge" class="rechargeword" @click='change'>充值<span>(比例：100积分10元)</span>
+            </label>
+        </div>
+        <div class="hiddendiv" v-show='hidden'>
+            <input type="radio" name="number" class="hidden" id="fifty" checked="checked"></input>
+            <label for="fifty">50分</label>
+            <input type="radio" name="number" class="hidden" id="hundred"></input>
+            <label for="hundred">100分</label><input type="radio" name="number" class="hidden" id="twohundred"></input>
+            <label for="twohundred">200分</label>
+            <input type="radio" name="number" class="hidden" id="fivehundred"></input>
+            <label for="fivehundred">500分</label>
+            <div class="random">
+                <input type="text" ></input><span>(请输入0-1000的整数)</span>
+            </div>
+        <div>
+            <input type="button" class="recharge-btn" value="充值" :disabled="able" :style='style' ></input>
+        </div>
+        </div>
+        
+    </section>
+</template>
+
+<script type="text/javascript">
+        export default {
+            data() {
+                    return {
+                        remaining:300,
+                        hidden:false,
+                    }
+                },
+                computed: {},
+                // mounted() {},
+                methods: {
+                    change:function(){
+                        
+                        this.hidden=!this.hidden;
+                    }
+                },
+                components: {}
+        }
+
+</script>
+
 <style lang="less" media="screen" scoped>
     .container{
         width: 80%;
@@ -85,36 +133,3 @@
 
 </style>
 
-<template lang="html">
-    <section class="container">
-        <div class="remain">剩余积分<span>{{remaining}}</span></div>
-        <div @click='change'><input type="checkbox" id="recharge" class="recharge"></input><label for="recharge" class="rechargeword">充值<span>(比例：100积分10元)</span></label></div>
-        <div class="hiddendiv" v-show='hidden'>
-            <input type="radio" name="number" class="hidden" id="fifty" checked="checked"></input><label for="fifty">50分</label><input type="radio" name="number" class="hidden" id="hundred"></input><label for="hundred">100分</label><input type="radio" name="number" class="hidden" id="twohundred"></input><label for="twohundred">200分</label><input type="radio" name="number" class="hidden" id="fivehundred"></input><label for="fivehundred">500分</label>
-            <div class="random"><input type="text" ></input><span>(请输入0-1000的整数)</span></div>
-        <div><input type="button" class="recharge-btn" value="充值" :disabled="able" :style='style' ></input></div>
-        </div>
-        
-    </section>
-</template>
-
-<script type="text/javascript">
-        export default {
-            data() {
-                    return {
-                        remaining:300,
-                        hidden:false,
-                    }
-                },
-                computed: {},
-                // mounted() {},
-                methods: {
-                    change:function(){
-                        
-                        this.hidden=!this.hidden;
-                    }
-                },
-                components: {}
-        }
-
-</script>

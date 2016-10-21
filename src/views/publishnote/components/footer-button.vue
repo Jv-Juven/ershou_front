@@ -1,3 +1,27 @@
+<template lang="html">
+   <footer class="footer-btn">
+       <input type="button" value="发布" class="btn btn-left"></input>
+       <input type="button" value="重置" class="btn btn-right" @click='zero'></input>
+   </footer>
+</template>
+
+<script type="text/javascript">
+        export default {
+            data() {
+                    return {}
+                },
+                computed: {},
+                // mounted() {},
+                methods: {
+                    zero:function(){
+                        this.$data='';
+                    },
+                },
+                components: {}
+        }
+
+</script>
+
 <style lang="less" media="screen" scoped>
     .footer-btn{
         width: 100%;
@@ -20,22 +44,3 @@
     }
 </style>
 
-<template lang="html">
-   <footer class="footer-btn">
-       <input type="button" value="发布" class="btn btn-left"></input>
-       <input type="button" value="重置" class="btn btn-right"></input>
-   </footer>
-</template>
-
-<script type="text/javascript">
-        export default {
-            data() {
-                    return {}
-                },
-                computed: {},
-                // mounted() {},
-                methods: {},
-                components: {}
-        }
-
-</script>

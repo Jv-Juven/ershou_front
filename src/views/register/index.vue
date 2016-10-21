@@ -1,7 +1,3 @@
-<style lang="less" media="screen">
-
-</style>
-
 <template>
      <register-header></register-header>
      <!-- 注册界面头部 -->
@@ -26,4 +22,6 @@
 
 </script>
 
+<style lang="less" media="screen">
 
+</style>

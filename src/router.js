@@ -1,12 +1,13 @@
 import Index from "views/index"
 import Search from "views/search"
-import Publish from "views/publishnote"
+import Publish from "views/publishNote"
 import Mynote from "views/mynote"
-import Setting from "views/selfsetting"
+import Setting from "views/selfSetting"
 import Account from "views/account"
 import Login from "views/login"
 import Register from "views/register"
 import Integration from "views/integration"
+
 export default function (router) {
     router.map({
         "/": {
@@ -36,6 +37,7 @@ export default function (router) {
          "/integration":{
             component:Integration
         },
+        
         "*": {
             component: Index
         },

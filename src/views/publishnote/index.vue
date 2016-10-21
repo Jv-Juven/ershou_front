@@ -1,7 +1,3 @@
-<style lang="less" media="screen">
-
-</style>
-
 <template>
     <publish-header></publish-header>
     <!-- 发布帖子头部 -->
@@ -24,6 +20,7 @@
     import GoodsInfo from "./components/goods-info"
     import SellerInfo from "./components/seller-info"
     import FooterButton from "./components/footer-button"
+    import Store from "../../vuex/store"//引入vuex中的publish的store
         export default {
             data() {
                 return {
@@ -33,7 +30,7 @@
                     // }
                 }
             },
-          
+            store:Store,
             components: {
                PublishHeader,
                PublishPicture,
@@ -46,5 +43,9 @@
         }
 
 </script>
+
+<style lang="less" media="screen">
+
+</style>
 
 

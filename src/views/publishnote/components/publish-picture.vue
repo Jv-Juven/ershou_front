@@ -1,3 +1,25 @@
+<template lang="html">
+   <section class="goods-picture">
+       <img src="../../../../static/image/photo.png" class="photo">
+       <div class="other-picture"></div>
+       <div class="other-picture"></div>
+       <div class="other-picture"></div>
+   </section>
+</template>
+
+<script type="text/javascript">
+        export default {
+            data() {
+                    return {}
+                },
+                computed: {},
+                // mounted() {},
+                methods: {},
+                components: {}
+        }
+
+</script>
+
 <style lang="less" media="screen" scoped>
     .goods-picture{
         width: 100%;
@@ -24,24 +46,3 @@
     }
 </style>
 
-<template lang="html">
-   <section class="goods-picture">
-       <img src="../../../../static/image/photo.png" class="photo">
-       <div class="other-picture"></div>
-       <div class="other-picture"></div>
-       <div class="other-picture"></div>
-   </section>
-</template>
-
-<script type="text/javascript">
-        export default {
-            data() {
-                    return {}
-                },
-                computed: {},
-                // mounted() {},
-                methods: {},
-                components: {}
-        }
-
-</script>

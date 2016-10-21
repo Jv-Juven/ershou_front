@@ -1,7 +1,3 @@
-<style lang="less" media="screen">
-
-</style>
-
 <template>
      <setting-header></setting-header>
      <!-- 个人设置头部 -->
@@ -25,5 +21,9 @@
         }
 
 </script>
+
+<style lang="less" media="screen">
+
+</style>
 
 

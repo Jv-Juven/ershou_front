@@ -1,3 +1,27 @@
+<template>
+  <footer class="footer-btn">
+    <div class="page">
+    	<a href="#">首页</a>
+    	<a href="#">上一页</a>
+    	<a href="#">下一页</a>
+    	<a href="#">尾页</a>
+    </div>
+  	</input><input type="button" value="删除" class="button"></input><input type="button" value="修改" class="button">
+  </footer>
+</template>
+<script type="text/javascript">
+	 import * as actions from 'data/actions'
+	export default {
+		vuex: {
+			actions
+		},
+		data() {
+			return {}
+		},
+		
+	}
+</script>
+
 <style lang="less" media="screen" scoped>
 	.footer-btn{
 		width: 100%;
@@ -31,26 +55,3 @@
 	}
 </style>
 
-<template>
-  <footer class="footer-btn">
-    <div class="page">
-    	<a href="#">首页</a>
-    	<a href="#">上一页</a>
-    	<a href="#">下一页</a>
-    	<a href="#">尾页</a>
-    </div>
-  	</input><input type="button" value="删除" class="button"></input><input type="button" value="修改" class="button">
-  </footer>
-</template>
-<script type="text/javascript">
-	 import * as actions from 'data/actions'
-	export default {
-		vuex: {
-			actions
-		},
-		data() {
-			return {}
-		},
-		
-	}
-</script>

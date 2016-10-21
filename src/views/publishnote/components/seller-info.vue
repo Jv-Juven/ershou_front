@@ -1,3 +1,47 @@
+<template lang="html">
+   <div class="goodsinfo">
+       <div class="caption">
+           <div class="caption-left">
+               <span>联系人</span>
+           </div>
+           <div class="caption-right">
+               <textarea placeholder="姓名"></textarea>
+           </div>
+       </div>
+       <div class="price">
+           <div class="price-left">
+               <span>联系电话</span>
+           </div>
+           <div class="price-right">
+               <input type="text" placeholder="请输入手机号码"></input>
+              
+           </div>
+       </div>
+       <div class="description">
+           <div class="description-left">
+               <span>学校</span>
+               
+           </div>
+           <div class="description-right">
+               <textarea placeholder="请输入所在学校"></textarea>
+           </div>
+       </div>
+   </div>
+</template>
+
+<script type="text/javascript">
+        export default {
+            data() {
+                    return {}
+                },
+                computed: {},
+                // mounted() {},
+                methods: {},
+                components: {}
+        }
+
+</script>
+
 <style lang="less" media="screen" scoped>
     .goodsinfo{
         width: 100%;
@@ -115,46 +159,3 @@
 
 </style>
 
-<template lang="html">
-   <div class="goodsinfo">
-       <div class="caption">
-           <div class="caption-left">
-               <span>联系人</span>
-           </div>
-           <div class="caption-right">
-               <textarea placeholder="姓名"></textarea>
-           </div>
-       </div>
-       <div class="price">
-           <div class="price-left">
-               <span>联系电话</span>
-           </div>
-           <div class="price-right">
-               <input type="text" placeholder="请输入手机号码"></input>
-              
-           </div>
-       </div>
-       <div class="description">
-           <div class="description-left">
-               <span>学校</span>
-               
-           </div>
-           <div class="description-right">
-               <textarea placeholder="请输入所在学校"></textarea>
-           </div>
-       </div>
-   </div>
-</template>
-
-<script type="text/javascript">
-        export default {
-            data() {
-                    return {}
-                },
-                computed: {},
-                // mounted() {},
-                methods: {},
-                components: {}
-        }
-
-</script>

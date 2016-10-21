@@ -1,3 +1,34 @@
+<template lang="html">
+   <div class="goodstype">
+       <span class="type-left">TYPE</span>
+       <input type="radio"  name="type" id="transfer" class="hidden" checked="checked"></input><label for="transfer" class="choose" @click='choose(1)'>个人转让</label>
+       <input type="radio"  name="type" id="selfshop" class="hidden"></input><label for="selfshop" class="choose" @click='choose(2)'>个人求购</label>
+       <input type="radio"  name="type" id="publictransfer" class="hidden"></input><label for="publictransfer" class="choose" @click='choose(3)'>公益转让</label>
+       <input type="radio"  name="type" id="publicshop" class="hidden"></input><label for="publicshop" class="choose" @click='choose(4)'>公益淘宝</label>
+      
+   
+   </div>
+</template>
+
+<script type="text/javascript">
+    import {choose} from "../../../vuex/actions"
+        export default {
+            data() {
+                    return {}
+                },
+                vuex:{
+                    actions:{
+                        choose:choose,
+                    }, 
+                },
+                computed: {},
+                // mounted() {},
+                methods: {},
+                components: {}
+        }
+
+</script>
+
 <style lang="less" media="screen" scoped>
     .goodstype{
         width: 100%;
@@ -42,28 +73,3 @@
 
 </style>
 
-<template lang="html">
-   <div class="goodstype">
-       <span class="type-left">TYPE</span>
-       <input type="radio"  name="type" id="transfer" class="hidden"></input><label for="transfer" class="choose">个人转让</label>
-       <input type="radio"  name="type" id="selfshop" class="hidden"></input><label for="selfshop" class="choose">个人求购</label>
-       <input type="radio"  name="type" id="publictransfer" class="hidden"></input><label for="publictransfer" class="choose">公益转让</label>
-       <input type="radio"  name="type" id="publicshop" class="hidden"></input><label for="publicshop" class="choose">公益淘宝</label>
-      
-   
-   </div>
-</template>
-
-<script type="text/javascript">
-        export default {
-            data() {
-                    return {}
-                },
-                // props["showdiv"]
-                computed: {},
-                // mounted() {},
-                methods: {},
-                components: {}
-        }
-
-</script>

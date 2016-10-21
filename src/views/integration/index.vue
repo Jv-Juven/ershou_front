@@ -1,7 +1,3 @@
-<style lang="less" media="screen">
-
-</style>
-
 <template>
      <integration-header></integration-header>
      <!-- 积分界面头部 -->
@@ -10,8 +6,8 @@
 </template>
 
 <script type="text/javascript">
-     import IntegrationHeader from "./components/header"
-     import IntegrationContain from "./components/integration-contain"
+    import IntegrationHeader from "./components/header"
+    import IntegrationContain from "./components/integration-contain"
         export default {
             data() {
                 return {}
@@ -25,5 +21,10 @@
         }
 
 </script>
+
+<style lang="less" media="screen">
+
+</style>
+
 
 
