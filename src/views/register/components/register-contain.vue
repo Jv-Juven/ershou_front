@@ -3,7 +3,7 @@
         width: 80%;
         height: 300px;
         magin:30px auto;
-        
+
     }
     .input-box{
         margin-top: 20px;
@@ -35,11 +35,11 @@
         }
         label{
             font-size: 20px;
-            
+
 
         }
         a{
-            
+
             text-decoration: none;
             color:red;
             &:hover{
@@ -69,7 +69,7 @@
             }
             .right{
                 display: inline-block;
-                
+
                 height: 30px;
                 line-height: 30px;
                 font-size: 22px;
@@ -84,7 +84,7 @@
         color:red;
         font-size: 20px;
         margin-left: 30%;
-        
+
     }
 </style>
 
@@ -108,7 +108,7 @@
         </div>
         <div class="register-box">
              <input type="button" class="register-btn" value="注册" :disabled="able" :style='style' @click="dad"></input>
-            
+
         </div>
     </section>
 </template>
@@ -180,16 +180,16 @@
                             else{
                                 this.ok=false;
                                 if (this.password!='请输入密码' && this.passok==false &&this.same==true &&this.agree==true) {
-                                this.able=false;
-                                this.style.opacity='1';
-                           }
+                                    this.able=false;
+                                    this.style.opacity='1';
+                                }
                             }
                         }else{
                             this.email='请输入邮箱'
                             this.able='disabled';
                                 this.style.opacity='0.3';
                         }
-                        
+
                     },
                     checkPassword:function(){
                         var reg=/^[a-zA-Z0-9_-]{6,9}$/;
@@ -204,16 +204,16 @@
                                 this.passok=false;
                                 if (this.checkword==this.password) {
                                     this.same=true;
-                                   
+
                                 }else{
                                     this.same=false;
                                     this.able='disabled';
                                 this.style.opacity='0.3';
                                 }
-                                 if (this.email!='请输入邮箱' && this.ok==false &&this.same==true &&this.agree==true) {
-                                this.able=false;
-                                this.style.opacity='1';
-                        }
+                                if (this.email!='请输入邮箱' && this.ok==false &&this.same==true &&this.agree==true) {
+                                    this.able=false;
+                                    this.style.opacity='1';
+                                }
                             }
                         }else{
                             this.text='text';
@@ -223,7 +223,7 @@
                         }
                     },
                     checkAgain:function(){
-                        
+
                         if (this.checkword !='') {
                             if (this.checkword!=this.password) {
                                 this.same=false;
