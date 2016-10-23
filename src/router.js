@@ -7,7 +7,8 @@ import Account from "views/account"
 import Login from "views/login"
 import Register from "views/register"
 import Integration from "views/integration"
-
+import Look from "views/look"
+import Report from "views/report"
 export default function (router) {
     router.map({
         "/": {
@@ -37,7 +38,12 @@ export default function (router) {
          "/integration":{
             component:Integration
         },
-        
+        "/look":{
+            component:Look
+        },
+        "/report":{
+            component:Report
+        },
         "*": {
             component: Index
         },

@@ -26,3 +26,9 @@
 export const choose =function({dispatch},amount){
 	dispatch('CHOOSE',amount)
 }
+export const reset =function({dispatch}){
+	dispatch('RESET')
+}
+export const setCaption =function({dispatch},value){
+	dispatch('SETCAPTION',value)
+}

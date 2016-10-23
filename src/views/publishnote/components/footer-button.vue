@@ -1,21 +1,44 @@
 <template lang="html">
    <footer class="footer-btn">
-       <input type="button" value="发布" class="btn btn-left"></input>
+       <input type="button" value="发布" class="btn btn-left" :disabled="ableone" :style="publishStyle" v-on:click="submit"></input>
        <input type="button" value="重置" class="btn btn-right" @click='zero'></input>
    </footer>
 </template>
 
 <script type="text/javascript">
+    import {reset} from "../.././../vuex/actions"
         export default {
             data() {
-                    return {}
+                    return {
+                        // ableone:'disabled',
+                    }
                 },
-                computed: {},
+                vuex:{
+                    getters:{
+                        ableone:function(state){
+                        return state.publish.able
+                        },
+                        publishStyle:function(state){
+                            return state.publish.publishStyle
+                        },
+
+                    },
+                    actions:{
+                        zero:reset
+                    },
+                },
+                computed: {
+                    // ableone:{
+                    //     get(){
+                    //         return this.able
+                    //     },
+                    // }
+                },
                 // mounted() {},
                 methods: {
-                    zero:function(){
-                        this.$data='';
-                    },
+                    submit:function(){
+                        alert(this.ableone)
+                    }
                 },
                 components: {}
         }
