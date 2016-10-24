@@ -255,7 +255,7 @@
                         this.captionStyle.color='#55bb22';
                         this.setStateOneTrue();
 
-                        if (this.stateTwo==true && this.stateThree ==true && this.sellerState==true) {
+                        if (this.stateTwo==true && this.stateThree ==true ) {
                             this.setGoodsStateTrue();
                         }
                     }
@@ -269,7 +269,7 @@
                     }else{
                         this.priceStyle.color='#55bb22';
                        this.setStateTwoTrue();
-                       if (this.stateOne==true && this.stateThree ==true) {
+                       if (this.stateOne==true && this.stateThree ==true ) {
                             this.setGoodsStateTrue();
                         }
                     }
@@ -282,7 +282,7 @@
                     }else{
                       this.descriptionStyle.color='#55bb22';
                       this.setStateThreeTrue();
-                      if (this.stateTwo==true && this.stateOne ==true) {
+                      if (this.stateTwo==true && this.stateOne ==true ) {
                             this.setGoodsStateTrue();
                         }
                     }

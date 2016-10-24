@@ -132,7 +132,8 @@
 				state.publish.sellerStateOne=false;
 				state.publish.sellerStateTwo=false;
 				state.publish.sellerStateThree=false;
-				
+				state.publish.goodsState=false;
+				state.publish.sellerState=false;
 				// checkone:true,
 				// checktwo:false,
 				// checkthree:false,
