@@ -15,7 +15,7 @@
            </div>
            <div class="price-right">
                <input type="text" placeholder="请输入手机号码" v-model="thisSellerNumber" v-on:keyup="checkNumber"></input>
-               <span :style="numberStyle">号码长度为11</span>
+               <span :style="numberStyle">请符合手机号码格式</span>
            </div>
        </div>
        <div class="description">
@@ -56,9 +56,7 @@
                         addressStyle:{
                             color:'#55bb22'
                         },
-                        stateOne:false,
-                        stateTwo:false,
-                        stateThree:false,
+                        
                     }
                 },
                 vuex:{
@@ -72,6 +70,15 @@
                         sellerSchool:function(state){
                             return state.publish.sellerSchool
                         },
+                        stateOne:function(state){
+                            return state.publish.sellerStateOne;
+                        },
+                        stateTwo:function(state){
+                            return state.publish.sellerStateTwo;
+                        },
+                        stateThree:function(state){
+                            return state.publish.sellerStateThree;
+                        }
                     },
                     actions:{
                         setSellerName:function({dispatch},value){
@@ -82,6 +89,24 @@
                         },
                         setSellerSchool:function({dispatch},value){
                             dispatch('SETSELLERSCHOOL',value)
+                        },
+                        setSellerStateOneTrue:function({dispatch}){
+                            dispatch("SETSELLERSTATEONETRUE")
+                        },
+                        setSellerStateOneFalse:function({dispatch}){
+                            dispatch("SETSELLERSTATEONEFALSE")
+                        },
+                        setSellerStateTwoTrue:function({dispatch}){
+                            dispatch("SETSELLERSTATETWOTRUE")
+                        },
+                        setSellerStateTwoFalse:function({dispatch}){
+                            dispatch("SETSELLERSTATETWOFALSE")
+                        },
+                        setSellerStateThreeTrue:function({dispatch}){
+                            dispatch("SETSELLERSTATETHREETRUE")
+                        },
+                        setSellerStateThreeFalse:function({dispatch}){
+                            dispatch("SETSELLERSTATETHREEFALSE")
                         },
                         setSellerStateTrue:function({dispatch}){
                             dispatch('SETSELLERSTATETRUE')
@@ -123,11 +148,12 @@
                         var reg=/^([a-zA-Z0-9\u4e00-\u9fa5\·]{1,10})$/;
                         if (!reg.test(this.sellerName)) {
                             this.nameStyle.color='red';
-                            this.statuOne=false;
+                            this.setSellerStateOneFalse();
                             this.setSellerStateFalse();
                         }else{
                             this.nameStyle.color='#55bb22';
-                            this.stateOne=true;
+                            this.setSellerStateOneTrue();
+                            
                             if (this.stateTwo==true && this.stateThree ==true) {
                                 
                                 this.setSellerStateTrue();
@@ -138,11 +164,11 @@
                         var reg=/^1[3|4|5|8][0-9]\d{8}$/;
                         if (!reg.test(this.sellerNumber)) {
                             this.numberStyle.color='red';
-                            this.stateTwo=false;
+                            this.setSellerStateTwoFalse();
                             this.setSellerStateFalse();
                         }else{
                             this.numberStyle.color='#55bb22'
-                            this.stateTwo=true;
+                            this.setSellerStateTwoTrue();
                             if (this.stateOne==true && this.stateThree ==true) {
                                 
                                 this.setSellerStateTrue();
@@ -154,12 +180,12 @@
                         var reg=/^([a-zA-Z0-9\u4e00-\u9fa5\·]{1,20})$/;
                         if (!reg.test(this.sellerSchool)) {
                             this.addressStyle.color='red';
-                            this.stateThree=false;
+                            this.setSellerStateThreeFalse();
                             this.setSellerStateFalse();
                         }else{
-                            this.nameStyle.color='#55bb22';
-
-                            this.stateThree=true;
+                            this.addressStyle.color='#55bb22';
+                            
+                            this.setSellerStateThreeTrue();
                             if (this.stateTwo==true && this.stateOne ==true) {
                                 
                                 this.setSellerStateTrue();
@@ -213,7 +239,7 @@
             line-height: 120px;
             textarea{
                 border:none;
-                width: 60%;
+                width: 50%;
                 height: 113px;
                 font-size: 22px;
                 border-right: 1px solid #999;
@@ -247,7 +273,7 @@
             line-height: 59px;
             input{
                 border:none;
-                width: 60%;
+                width: 50%;
                 height: 55px;
                 border-right: 1px solid #999;
                 font-size: 22px;
@@ -280,7 +306,7 @@
             line-height: 120px;
             textarea{
                 border:none;
-                width: 60%;
+                width: 50%;
                 height: 110px;
                 font-size: 22px;
                 border-right: 1px solid #999;

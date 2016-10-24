@@ -11,14 +11,16 @@
 </template>
 
 <script type="text/javascript">
-    import {choose} from "../../../vuex/actions"
+    // import {choose} from "../../../vuex/actions"
         export default {
             data() {
                     return {}
                 },
                 vuex:{
                     actions:{
-                        choose:choose,
+                        choose:function({dispatch},amount){
+                        dispatch('CHOOSE',amount)
+                    },
                     }, 
                 },
                 computed: {},

@@ -24,7 +24,7 @@
                
            </div>
            <div class="description-right">
-               <textarea placeholder="请输入描述内容" v-model="thisDescription" v-on:keyup="checkDescription" wrap="wrap"></textarea>
+               <textarea placeholder="请输入描述内容" v-model="thisDescription" v-on:keyup="checkDescription" ></textarea>
                <span :style="descriptionStyle">描述字数大于0小于80</span>
            </div>
        </div>
@@ -36,7 +36,8 @@
                <span>标题</span>
            </div>
            <div class="caption-right">
-               <textarea placeholder="希望购买商品的标题" v-model="thisCaption"></textarea>
+               <textarea placeholder="希望购买商品的标题" v-model="thisCaption" v-on:keyup="checkCaption"></textarea>
+                <span :style="captionStyle">字数在20字以内</span>
            </div>
        </div>
        <div class="price">
@@ -44,8 +45,8 @@
                <span>价格</span>
            </div>
            <div class="price-right">
-               <input type="text" placeholder="可以接受价格范围" v-model="thisPrice"></input>
-               <span>元</span>
+               <input type="text" placeholder="可以接受价格范围" v-model="thisPrice" v-on:keyup="checkPrice"></input>
+               <span >元(<span :style="priceStyle">请输入大于0的数字</span>)</span>
            </div>
        </div>
        <div class="description">
@@ -54,7 +55,8 @@
                
            </div>
            <div class="description-right">
-               <textarea placeholder="希望购买商品的描述" v-model="thisDescription"></textarea>
+               <textarea placeholder="希望购买商品的描述" v-model="thisDescription" v-on:keyup="checkDescription"></textarea>
+               <span :style="descriptionStyle">描述字数大于0小于80</span>
            </div>
        </div>
    </div>
@@ -65,7 +67,8 @@
                <span>标题</span>
            </div>
            <div class="caption-right">
-               <textarea placeholder="帖子标题" v-model="thisCaption"></textarea>
+                <textarea placeholder="帖子标题" v-model="thisCaption" v-on:keyup="checkCaption"></textarea>
+                <span :style="captionStyle">字数在20字以内</span>
            </div>
        </div>
        <div class="price">
@@ -73,8 +76,8 @@
                <span>积分</span>
            </div>
            <div class="price-right">
-               <input type="text"  v-model="thisPrice"></input>
-               <span>分</span>
+               <input type="text"  v-model="thisPrice" v-on:keyup="checkPrice"></input>
+               <span>分(<span :style="priceStyle">请输入大于0的数字</span>)</span>
            </div>
        </div>
        <div class="description">
@@ -83,7 +86,7 @@
                
            </div>
            <div class="description-right">
-               <textarea placeholder="请输入描述内容" v-model="thisDescription"></textarea>
+               <textarea placeholder="请输入描述内容" v-model="thisDescription"v-on:keyup="checkDescription" v-on:keyup="checkDescription"></textarea>
            </div>
        </div>
    </div>
@@ -94,7 +97,8 @@
                <span>标题</span>
            </div>
            <div class="caption-right">
-               <textarea placeholder="帖子标题" v-model="thisCaption"></textarea>
+                <textarea placeholder="帖子标题" v-model="thisCaption" v-on:keyup="checkCaption"></textarea>
+                <span :style="captionStyle">字数在20字以内</span>
            </div>
        </div>
        <div class="price">
@@ -102,8 +106,8 @@
                <span>积分</span>
            </div>
            <div class="price-right">
-               <input type="text" placeholder="请输入能接受花费积分数量" v-model="thisPrice"></input>
-               <span>分</span>
+               <input type="text" placeholder="请输入能接受花费积分数量" v-model="thisPrice" v-on:keyup="checkPrice"></input>
+               <span>分(<span :style="priceStyle">请输入大于0的数字</span>)</span>
            </div>
        </div>
        <div class="description">
@@ -112,7 +116,8 @@
                
            </div>
            <div class="description-right">
-               <textarea placeholder="请输入希望购买商品描述" v-model="thisDescription"></textarea>
+               <textarea placeholder="请输入希望购买商品描述" v-model="thisDescription" v-on:keyup="checkDescription"></textarea>
+               <span :style="descriptionStyle">描述字数大于0小于80</span>
            </div>
        </div>
    </div>
@@ -132,9 +137,9 @@
                       descriptionStyle:{
                         color:'#55bb22'
                       },
-                      stateOne:false,//数据填写正确就为true，三个输入框，三个状态
-                      stateTwo:false,
-                      stateThree:false,
+                      // stateOne:false,//数据填写正确就为true，三个输入框，三个状态
+                      // stateTwo:false,
+                      // stateThree:false,
                     }
                 },
                 vuex:{
@@ -160,9 +165,19 @@
                     description:function(state){
                       return state.publish.description
                     },
-                    sellerState:function(state){
-                        return state.publish.sellerState;
-                    }
+                    // sellerState:function(state){
+                    //     return state.publish.sellerState;
+                    // }
+                    stateOne:function(state){
+                        return state.publish.goodsStateOne
+                    },
+                    stateTwo:function(state){
+                        return state.publish.goodsStateTwo
+                    },
+                    stateThree:function(state){
+                        return state.publish.goodsStateThree
+                    },
+
                 },
                 actions:{
                   setCaption:function({dispatch},value){
@@ -180,6 +195,24 @@
                   },
                   setGoodsStateFalse:function({dispatch}){
                     dispatch('SETGOODSSTATEFALSE')
+                  },
+                  setStateOneTrue:function({dispatch}){
+                    dispatch('SETSTATEONETRUE')
+                  },
+                  setStateOneFalse:function({dispatch}){
+                    dispatch('SETSTATEONEFALSE')
+                  },
+                  setStateTwoTrue:function({dispatch}){
+                    dispatch('SETSTATETWOTRUE')
+                  },
+                  setStateTwoFalse:function({dispatch}){
+                    dispatch('SETSTATETWOFALSE')
+                  },
+                  setStateThreeTrue:function({dispatch}){
+                    dispatch('SETSTATETHREETRUE')
+                  },
+                  setStateThreeFalse:function({dispatch}){
+                    dispatch('SETSTATETHREEFALSE')
                   },
                 },
                 },
@@ -214,13 +247,14 @@
                   checkCaption:function(){
                     if (this.thisCaption.length>=20 || this.thisCaption.length<=0) {
                         this.captionStyle.color='red';
-                        this.stateOne=false;
+                        this.setStateOneFalse();
                         
                         this.setGoodsStateFalse();
                         
                     }else{
                         this.captionStyle.color='#55bb22';
-                        this.stateOne=true;
+                        this.setStateOneTrue();
+
                         if (this.stateTwo==true && this.stateThree ==true && this.sellerState==true) {
                             this.setGoodsStateTrue();
                         }
@@ -228,13 +262,13 @@
                   },
                   checkPrice:function(){
                     var reg=/^\d{1,10}$/;
-                    if (!reg.test(this.thisPrice)) {
+                    if (!reg.test(this.thisPrice) || this.thisPrice==0) {
                       this.priceStyle.color='red';
-                      this.stateTwo=false;
+                      this.setStateTwoFalse();
                       this.setGoodsStateFalse();
                     }else{
                         this.priceStyle.color='#55bb22';
-                       this.stateTwo=true;
+                       this.setStateTwoTrue();
                        if (this.stateOne==true && this.stateThree ==true) {
                             this.setGoodsStateTrue();
                         }
@@ -243,11 +277,11 @@
                   checkDescription:function(){
                     if (this.thisDescription.length>=80 || this.thisDescription.length<1) {
                       this.descriptionStyle.color='red';
-                      this.stateThree=false;
+                      this.setStateThreeFalse();
                       this.setGoodsStateFalse();
                     }else{
                       this.descriptionStyle.color='#55bb22';
-                      this.stateThree=true;
+                      this.setStateThreeTrue();
                       if (this.stateTwo==true && this.stateOne ==true) {
                             this.setGoodsStateTrue();
                         }
@@ -301,7 +335,7 @@
             
             textarea{
                 border:none;
-                width: 60%;
+                width: 50%;
                 height: 113px;
                 line-height: 113px;
                 font-size: 22px;
@@ -314,7 +348,7 @@
                 clear: both;
                 display: inline-block;
                 font-size: 22px;
-                width: 30%;
+                width: 40%;
                 height: 40px;
                 position: absolute;
             }
@@ -340,7 +374,7 @@
             height: 59px;
             input{
                 border:none;
-                width: 20%;
+                width: 50%;
                 height: 55px;
                 border-right: 1px solid #999;
                 font-size: 22px;
@@ -373,7 +407,7 @@
             line-height: 120px;
             textarea{
                 border:none;
-                width: 60%;
+                width: 50%;
                 height: 110px;
                 line-height: 30px;
                 font-size: 22px;
