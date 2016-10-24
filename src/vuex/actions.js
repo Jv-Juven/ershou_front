@@ -23,12 +23,8 @@
 // export const change = function ({ dispatch}) {
 //  dispatch('CHANGE')
 // }
-export const choose =function({dispatch},amount){
-	dispatch('CHOOSE',amount)
-}
-export const reset =function({dispatch}){
-	dispatch('RESET')
-}
-export const setCaption =function({dispatch},value){
-	dispatch('SETCAPTION',value)
-}
+
+
+// export const setCaption =function({dispatch},value){
+// 	dispatch('SETCAPTION',value)
+// }

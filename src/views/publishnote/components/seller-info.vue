@@ -26,18 +26,6 @@
            <div class="description-right">
                  <textarea placeholder="请输入交易地点" v-model="thisSellerSchool" v-on:keyup="checkAddress"></textarea>
                  <span :style="addressStyle">不能为空，最多20字</span>
-                <!-- <select class="school">
-                    <option>广中医</option>
-                    <option>广药</option>
-                    <option>华工</option>
-                    <option>中大</option>
-                    <option>广外</option>
-                    <option>广工</option>
-                    <option>星海</option>
-                    <option>华师</option>
-                    <option>广大</option>
-                    <option>广美</option>
-                </select> -->
            </div>
        </div>
    </div>
@@ -81,6 +69,7 @@
                         }
                     },
                     actions:{
+                        //返回卖家信息
                         setSellerName:function({dispatch},value){
                             dispatch('SETSELLERNAME',value)
                         },
@@ -90,6 +79,7 @@
                         setSellerSchool:function({dispatch},value){
                             dispatch('SETSELLERSCHOOL',value)
                         },
+                        //返回卖家信息状态
                         setSellerStateOneTrue:function({dispatch}){
                             dispatch("SETSELLERSTATEONETRUE")
                         },
@@ -118,6 +108,7 @@
                 },
                 computed: {
                     thisSellerName:{
+                        //v-model输入框的解决方法
                         get(){
                             return this.sellerName
                         },
@@ -144,6 +135,7 @@
                 },
                 // mounted() {},
                 methods: {
+                    //keyup的方法思想是，如果输入内容格式不符合要求，则让span的颜色为红色，当符合要求后，设定每个input框的状态值为true，当总状态为true，触发setSellerStateTrue()方法
                     checkName:function(){
                         var reg=/^([a-zA-Z0-9\u4e00-\u9fa5\·]{1,10})$/;
                         if (!reg.test(this.sellerName)) {

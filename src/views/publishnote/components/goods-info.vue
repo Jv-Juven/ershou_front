@@ -124,10 +124,11 @@
 </template>
 
 <script type="text/javascript">
-// import {setCaption} from "../../../vuex/actions"
+
         export default {
             data() {
                     return {
+                        //caption,price,description信息填写错误，动态改变提示文字的颜色
                       captionStyle:{
                         color:'#55bb22',
                       },
@@ -137,13 +138,12 @@
                       descriptionStyle:{
                         color:'#55bb22'
                       },
-                      // stateOne:false,//数据填写正确就为true，三个输入框，三个状态
-                      // stateTwo:false,
-                      // stateThree:false,
+                     
                     }
                 },
                 vuex:{
                     getters:{
+                        //返回v-show的值以及各状态值
                     checkone:function(state){
                         return state.publish.checkone
                     },
@@ -180,9 +180,9 @@
 
                 },
                 actions:{
+                    //因为vuex不能直接使用v-model，所以把input的输入绑定到computed的set()，然后调用actions
                   setCaption:function({dispatch},value){
                     dispatch('SETCAPTION',value)
-                    // ({dispatch},value) =>dispatch('SETCAPTION',value)
                   },
                   setPrice:function({dispatch},value){
                     dispatch('SETPRICE',value)
@@ -217,6 +217,7 @@
                 },
                 },
                 computed: {
+                    //因为vuex不能直接使用v-model，所以把input的输入绑定到computed的set()，然后调用actions
                   thisCaption:{
                     get(){
                       return this.caption;
@@ -246,15 +247,15 @@
                 methods: {
                   checkCaption:function(){
                     if (this.thisCaption.length>=20 || this.thisCaption.length<=0) {
+                        //caption信息填写错误，此状态为false，并且设置goosstate为false
                         this.captionStyle.color='red';
                         this.setStateOneFalse();
-                        
                         this.setGoodsStateFalse();
                         
                     }else{
+                        //caption信息填写正确，此状态为true，并且设置goosstate为true
                         this.captionStyle.color='#55bb22';
                         this.setStateOneTrue();
-
                         if (this.stateTwo==true && this.stateThree ==true ) {
                             this.setGoodsStateTrue();
                         }

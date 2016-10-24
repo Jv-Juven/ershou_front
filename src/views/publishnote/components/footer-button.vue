@@ -6,7 +6,7 @@
 </template>
 
 <script type="text/javascript">
-    import {reset} from "../.././../vuex/actions"
+    // import {reset} from "../.././../vuex/actions"
         export default {
             data() {
                     return {
@@ -24,15 +24,13 @@
 
                     },
                     actions:{
-                        zero:reset
+                        zero:function({dispatch}){
+    dispatch('RESET')
+}
                     },
                 },
                 computed: {
-                    // ableone:{
-                    //     get(){
-                    //         return this.able
-                    //     },
-                    // }
+
                 },
                 // mounted() {},
                 methods: {

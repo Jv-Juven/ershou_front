@@ -11,7 +11,6 @@
 </template>
 
 <script type="text/javascript">
-    // import {choose} from "../../../vuex/actions"
         export default {
             data() {
                     return {}
@@ -19,7 +18,8 @@
                 vuex:{
                     actions:{
                         choose:function({dispatch},amount){
-                        dispatch('CHOOSE',amount)
+                        dispatch('CHOOSE',amount);
+                        //通过选择radio触发不同事件
                     },
                     }, 
                 },
