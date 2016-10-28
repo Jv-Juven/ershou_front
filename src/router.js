@@ -9,6 +9,18 @@ import Register from "views/register"
 import Integration from "views/integration"
 import Look from "views/look"
 import Report from "views/report"
+import Collector from "views/collector"
+import Servers from "views/servers"
+import ChatServers from "views/chatServers"
+import MyMessage from "views/myMessage"
+import Market from "views/market"
+import Phone from "views/phone"
+import Activity from "views/activity"
+import Participator from "views/participator"
+import Holder from "views/holder"
+import Examine from "views/examine"
+import PublishMessage from "views/publishMessage"
+
 export default function (router) {
     router.map({
         "/": {
@@ -43,6 +55,39 @@ export default function (router) {
         },
         "/report":{
             component:Report
+        },
+        "/collector":{
+            component:Collector
+        },
+        "/server":{
+            component:Servers
+        },
+        "/chatserver":{
+            component:ChatServers
+        },
+        "/mymessage":{
+            component:MyMessage
+        },
+        "/market":{
+            component:Market
+        },
+        "/phone":{
+            component:Phone
+        },
+        "/activity":{
+            component:Activity
+        },
+        "/participator":{
+            component:Participator
+        },
+        "/holder":{
+            component:Holder
+        },
+        "/examine":{
+            component:Examine
+        },
+        "/publishmessage":{
+            component:PublishMessage
         },
         "*": {
             component: Index

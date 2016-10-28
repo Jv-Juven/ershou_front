@@ -1,7 +1,7 @@
 <template>
   <header class="searchtop">
 	<div class="left">
-	  <span>&lt;</span>
+	  <span v-link="{path:'index'}">&lt;</span>
 	</div>
 	<div class="right">
 	  <input type="text" placeholder="请输入关键字" class="search-box"></input>

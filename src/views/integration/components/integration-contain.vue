@@ -112,6 +112,7 @@
             width: 20%;
             height: 40px;
             font-size: 20px;
+            border:2px solid #999;
         }
         span{
             margin-left: 10px;

@@ -1,28 +1,28 @@
 <template>
 	<div class="container">
 		<div class="component">
-			<img src="../../../../static/image/publishnote.gif"  class="picture">
-			<span>发布帖子</span>
+			<img src="../../../../static/image/publishnote.gif"  class="picture" v-link="{path:'publish'}">
+			<span v-link="{path:'publish'}">发布帖子</span>
 		</div>
 		<div class="component">
-			<img src="../../../../static/image/mynote.gif"  class="picture">
-			<span>我的帖子</span>
+			<img src="../../../../static/image/mynote.gif"  class="picture" v-link="{path:'mynote'}">
+			<span v-link="{path:'mynote'}">我的帖子</span>
 		</div>
 		<div class="component clright">
-			<img src="../../../../static/image/chat.gif"  class="picture">
-			<span>联系客服</span>
+			<img src="../../../../static/image/chat.gif"  class="picture" v-link="{path:'server'}">
+			<span v-link="{path:'server'}">联系客服</span>
 		</div>
 		<div class="component">
-			<img src="../../../../static/image/market.gif"  class="picture">
-			<span>二手市场</span>
+			<img src="../../../../static/image/market.gif"  class="picture" v-link="{path:'market'}">
+			<span v-link="{path:'market'}">二手市场</span>
 		</div>
 		<div class="component">
-			<img src="../../../../static/image/setting.gif"  class="picture">
-			<span>个人设置</span>
+			<img src="../../../../static/image/setting.gif"  class="picture" v-link="{path:'setting'}">
+			<span v-link="{path:'setting'}">个人设置</span>
 		</div>
 		<div class="component clright">
-			<img src="../../../../static/image/report.gif"  class="picture">
-			<span>举报商品</span>
+			<img src="../../../../static/image/report.gif"  class="picture" v-link="{path:'activity'}">
+			<span v-link="{path:'activity'}">义卖活动</span>
 		</div>
 	</div>
 </template>

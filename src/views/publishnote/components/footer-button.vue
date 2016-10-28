@@ -1,6 +1,6 @@
 <template lang="html">
    <footer class="footer-btn">
-       <input type="button" value="发布" class="btn btn-left" :disabled="ableone" :style="publishStyle" v-on:click="submit"></input>
+       <input type="button" value="发布" class="btn btn-left" :disabled="ableone" :style="publishStyle" v-on:click="submit" v-link="{path:'publishmessage'}"></input>
        <input type="button" value="重置" class="btn btn-right" @click='zero'></input>
    </footer>
 </template>

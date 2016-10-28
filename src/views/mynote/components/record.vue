@@ -2,7 +2,7 @@
     <div class="record">
     	<div class="record-top">
     		<p><b>发帖记录</b><span>(每天最多发布三条，记录保存七天)</span></p>
-    		<input type="button" value="发布" class="publish-note"></input>
+    		<input type="button" value="发布" class="publish-note" v-link="{path:'publish'}"></input>
     	</div>
     	<div class="record-bottom">
     		<span>管理帖子</span>

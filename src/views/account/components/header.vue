@@ -1,8 +1,8 @@
 <template lang="html">
    <header class="publish-header">
-       <span class="header-left">&lt;</span>
+       <span class="header-left" v-link="{path: 'setting'}">&lt;</span>
        <span class="header-right">账号信息</span>
-       <input type="button" value="首页" class="search-btn"></input>
+       <input type="button" value="首页" class="search-btn" v-link="{path: 'index'}"></input>
    </header>
 </template>
 

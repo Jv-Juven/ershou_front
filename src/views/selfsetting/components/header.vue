@@ -2,7 +2,7 @@
    <header class="publish-header">
        <span class="header-left">&lt;</span>
        <span class="header-right">个人设置</span>
-       <input type="button" value="首页" class="search-btn"></input>
+       <input type="button" value="首页" class="search-btn" v-link="{path:'index'}"></input>
    </header>
 </template>
 

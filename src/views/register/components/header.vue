@@ -2,7 +2,7 @@
    <header class="publish-header">
        <span class="header-left">&lt;</span>
        <span class="header-right">注册</span>
-       <input type="button" value="登录" class="login-btn"></input>
+       <input type="button" value="登录" class="login-btn" v-link="{path:'login'}"></input>
    </header>
 </template>
 

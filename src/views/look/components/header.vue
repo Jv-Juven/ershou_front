@@ -1,8 +1,8 @@
 <template lang="html">
    <header class="publish-header">
-       <span class="header-left">&lt;</span>
+       <span class="header-left" v-link="{path:'market'}">&lt;</span>
        <span class="header-right">个人转让</span>
-       <input type="button" value="首页" class="login-btn"></input>
+       <input type="button" value="首页" class="login-btn" v-link="{path:'index'}"></input>
    </header>
 </template>
 

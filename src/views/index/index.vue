@@ -1,14 +1,16 @@
 <template>
-    <title-header></title-header>
+    <index-header></index-header>
     <!-- 首页头部 -->
-    <index-search></index-search>
+    <index-nav></index-nav>
+    <!-- <index-search></index-search> -->
     <!-- 首页搜索框 -->
     <index-container></index-container>
     <!-- 首页主题功能部分 -->
 </template>
 
 <script type="text/javascript">
-    import TitleHeader from "./components/header.vue"
+    import IndexHeader from "./components/header"
+    import IndexNav from "./components/index-nav"
     import IndexSearch from "./components/index-search"
     import IndexContainer from "./components/index-container"
         export default {
@@ -17,7 +19,8 @@
             },
             components: {
 
-                TitleHeader,
+                IndexHeader,
+                IndexNav,
                 IndexSearch,
                 IndexContainer,
             },

@@ -1,11 +1,12 @@
 <template lang="html">
    <ul>
-       <li><a href="#">我的账号<span>&gt;</span></a></li>
-       <li><a href="#">我的积分<span>&gt;</span></a></li>
-       <li><a href="#">浏览历史<span>&gt;</span></a></li>
-       <li><a href="#">管理帖子<span>&gt;</span></a></li>
-       <li><a href="#">收到留言<span>&gt;</span></a></li>
-       <li><a href="#">成交单<span>&gt;</span></a></li>
+       <li><a v-link="{path:'account'}">我的账号<span>&gt;</span></a></li>
+       <li><a v-link="{path:'integration'}">我的积分<span>&gt;</span></a></li>
+       <li><a v-link="{path:'history'}">浏览历史<span>&gt;</span></a></li>
+       <li><a v-link="{path:'collector'}">我的收藏<span>&gt;</span></a></li>
+       <li><a v-link="{path:'mynote'}">管理帖子<span>&gt;</span></a></li>
+       <li><a v-link="{path:'mymessage'}">收到留言<span>&gt;</span></a></li>
+       <li><a v-link="{path:'index'}">成交单<span>&gt;</span></a></li>
    </ul>
 </template>
 
