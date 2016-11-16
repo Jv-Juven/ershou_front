@@ -1,7 +1,7 @@
 <template lang="html">
 	<div class="nav">
         <span class="welcome">欢迎您:</span>
-        <span class="username">{{username}}</span>   
+        <span class="username" v-link="{path:'/account'}">{{username}}</span>   
     </div>
 </div>
 

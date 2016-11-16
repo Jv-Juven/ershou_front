@@ -1,12 +1,12 @@
 <template>
-     <setting-header></setting-header>
+     <setting-header msgone="个人设置"></setting-header>
      <!-- 个人设置头部 -->
      <setting-contain></setting-contain>
      <!-- 个人设置主体 -->
 </template>
 
 <script type="text/javascript">
-     import SettingHeader from "./components/header"
+     import SettingHeader from "../../components/header"
      import SettingContain from "./components/setting-contain"
         export default {
             data() {

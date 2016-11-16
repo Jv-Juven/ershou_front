@@ -1,8 +1,8 @@
 <template lang="html">
    <header class="publish-header">
-       <span class="header-left">&lt;</span>
+       <span class="header-left" v-on:click="back()">&lt;</span>
        <span class="header-right">个人设置</span>
-       <input type="button" value="首页" class="search-btn" v-link="{path:'index'}"></input>
+       <div  class="index"><img src="../../../../static/image/home.png" class="index-picture" v-link="{path:'index'}"></div>
    </header>
 </template>
 
@@ -13,7 +13,11 @@
                 },
                 computed: {},
                 // mounted() {},
-                methods: {},
+                methods: {
+                    back:function(){
+                        window.history.go(-1);
+                    },
+                },
                 components: {}
         }
 
@@ -52,25 +56,34 @@
 
         
     }
-    .search-btn{
-        width: 120px;
-        height: 60px;
-        line-height: 60px;
-        color: #fff;
-        background-color: #55bb22;
-        border:2px solid #fff;
-        border-radius: 5px;
-        font-size: 30px;
-        float: right;
-        margin-right: 30px;
-        margin-top: 30px;
+    // .search-btn{
+    //     width: 120px;
+    //     height: 60px;
+    //     line-height: 60px;
+    //     color: #fff;
+    //     background-color: #55bb22;
+    //     border:2px solid #fff;
+    //     border-radius: 5px;
+    //     font-size: 30px;
+    //     float: right;
+    //     margin-right: 30px;
+    //     margin-top: 30px;
     
+    // }
+    // .search-btn:hover{
+    //     cursor: pointer;
+    // }
+    // .search-btn:focus{
+    //     outline:2px solid #55bb22;
+    // }
+    .index{
+        float: right;
+        margin-right: 50px;
     }
-    .search-btn:hover{
-        cursor: pointer;
-    }
-    .search-btn:focus{
-        outline:2px solid #55bb22;
+    .index-picture{
+        height: 60px;
+        width: 60px;
+        margin-top: 30px;
     }
 </style>
 

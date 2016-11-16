@@ -1,7 +1,8 @@
 <template lang="html">
    <header class="publish-header">
-       <span class="header-left">&lt;</span>
+       <span class="header-left" v-on:click="back()">&lt;</span>
        <span class="header-right">发布信息</span>
+       <div  class="index"><img src="../../../../static/image/home.png" class="index-picture" v-link="{path:'index'}"></div>
    </header>
 </template>
 
@@ -12,7 +13,11 @@
                 },
                 computed: {},
                 // mounted() {},
-                methods: {},
+                methods: {
+                    back:function(){
+                    window.history.go(-1)
+                    }
+                },
                 components: {}
         }
 
@@ -24,6 +29,8 @@
         width: 100%;
         background-color: #55bb22;
         line-height: 120px;
+        overflow: hidden;
+        position: relative;
     }
     .font{
         color: #fff;
@@ -33,6 +40,7 @@
         .font;
         margin-left: 40px;
         float: left;
+        font-size: 70px;
 
     }
     .header-right{
@@ -40,9 +48,24 @@
         display: block;
         width: 300px;
         height: 60px;
-        margin: 0px auto;
+       
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        
         text-align: center;
         
+        
+    }
+    .index{
+
+        float: right;
+        margin-right: 35px;
+    }
+    .index-picture{
+        height: 60px;
+        width: 60px;
+        margin-top: 30px;
     }
 </style>
 

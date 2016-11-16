@@ -1,5 +1,5 @@
 <template lang="html">
-    <div></div>
+    <!-- <div style="clear:both;"> </div> -->
     <ul>
         <li v-for="item in items" >
         <a href="#">
@@ -17,12 +17,14 @@
             data() {
                     return {
                         items:[
-                            {src:'../../../../static/image/market/phone.png',text:'手机'},
-                            {src:'../../../../static/image/market/electrical.png',text:'家电'},
-                            {src:'../../../../static/image/market/parts.png',text:'配件'},
-                            {src:'../../../../static/image/market/sport.png',text:'运动'},
-                            {src:'../../../../static/image/market/camera.png',text:'相机'},
-                            {src:'../../../../static/image/market/accessory.png',text:'饰品'},
+                            {src:'./static/image/market/phone.jpg',text:'手机'},
+                            {src:'./static/image/market/electrical.jpg',text:'家电'},
+                            {src:'./static/image/market/parts.jpg',text:'配件'},
+                            {src:'./static/image/market/sport.jpg',text:'运动'},
+                            {src:'./static/image/market/camera.jpg',text:'相机'},
+                            {src:'./static/image/market/accessory.jpg',text:'饰品'},
+                            {src:'./static/image/market/books.jpg',text:'书籍'},
+                            {src:'./static/image/market/other.jpg',text:'其他'},
 
                         ],
                     }
@@ -40,9 +42,10 @@
 <style lang="less" media="screen" scoped>
     ul{
         list-style: none;
+        clear: both;
         li{
-            height: 80px;
-            line-height: 80px;
+            height: 100px;
+            line-height: 100px;
 
             border-bottom: 1px solid #999;
             position: relative;
@@ -50,17 +53,19 @@
             a{
                 display: inline-block;
                 width: 100%;
-                height: 80px;
+                height: 100px;
+                color:#000;
             }
             img{
                 height: 35px;
                 width: 35px;
-                margin-left: 30px;
-                margin-top: 12.5px;
+                margin-left: 50px;
+                margin-top: 32.5px;
             }
             .word{
                 position: absolute;
                 left:100px;
+                font-weight: bold;
                 // display: inline-block;
                 // width: 80px;
                 // height: 40px;

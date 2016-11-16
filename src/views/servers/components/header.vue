@@ -1,8 +1,8 @@
 <template lang="html">
    <header class="publish-header">
-       <span class="header-left">&lt;</span>
+       <span class="header-left" v-on:click="back()">&lt;</span>
        <span class="header-right">客服</span>
-       <input type="button" value="首页" class="login-btn" v-link="{path:'index'}"></input>
+       <div  class="index"><img src="../../../../static/image/home.png" class="index-picture" v-link="{path:'index'}"></div>
    </header>
 </template>
 
@@ -13,7 +13,11 @@
                 },
                 computed: {},
                 // mounted() {},
-                methods: {},
+                methods: {
+                    back:function(){
+                        window.history.go(-1);
+                    },
+                },
                 components: {}
         }
 
@@ -35,6 +39,7 @@
         .font;
         margin-left: 40px;
         float: left;
+        font-size: 70px;
 
     }
     .header-right{
@@ -52,25 +57,34 @@
 
         
     }
-    .login-btn{
-        width: 120px;
-        height: 60px;
-        line-height: 60px;
-        color: #fff;
-        background-color: #55bb22;
-        border:2px solid #fff;
-        border-radius: 5px;
-        font-size: 30px;
+    .index{
         float: right;
-        margin-right: 30px;
+        margin-right: 50px;
+    }
+    .index-picture{
+        height: 60px;
+        width: 60px;
         margin-top: 30px;
+    }
+    // .login-btn{
+    //     width: 120px;
+    //     height: 60px;
+    //     line-height: 60px;
+    //     color: #fff;
+    //     background-color: #55bb22;
+    //     border:2px solid #fff;
+    //     border-radius: 5px;
+    //     font-size: 30px;
+    //     float: right;
+    //     margin-right: 30px;
+    //     margin-top: 30px;
     
-    }
-    .login-btn:hover{
-        cursor: pointer;
-    }
-    .login-btn:focus{
-        outline:2px solid #55bb22;
-    }
+    // }
+    // .login-btn:hover{
+    //     cursor: pointer;
+    // }
+    // .login-btn:focus{
+    //     outline:2px solid #55bb22;
+    // }
 </style>
 

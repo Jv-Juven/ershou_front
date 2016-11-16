@@ -1,12 +1,14 @@
 <template>
   <header class="searchtop">
 	<div class="left">
-	  <span v-link="{path:'index'}">&lt;</span>
+	  <span v-on:click="back()">&lt;</span>
 	</div>
 	<div class="right">
-	  <input type="text" placeholder="请输入关键字" class="search-box"></input>
-	  <input type="button" value="搜索" class="search-btn"></input>
-	</div>
+      <input type="text" placeholder="请输入关键字" class="search-box" ></input>
+      <img src="../../../../static/image/search.jpg" class="search-jpg" >
+      <!-- <input type="button" value="搜索" class="search-btn" ></input> -->
+    </div>
+    <div  class="index"><img src="../../../../static/image/home.png" class="index-picture" v-link="{path:'index'}"></div>
   </header>
 </template>
 <script type="text/javascript">
@@ -18,6 +20,11 @@
 		data() {
 			return {}
 		},
+    methods:{
+      back:function(){
+                window.history.go(-1)
+            }
+    }
 		
 	}
 </script>
@@ -41,44 +48,60 @@
 		font-size: 55px;
    	}
   	.right{
-
-   	}
-   	.search-box {
-	   	font-size: 28px;
-		width: 60%;
-		height: 80px;
-		line-height: 80px;
-		border:1px solid #fff;
-		border-radius: 40px;
-		float: left;
-		margin-left: 30px;
-		padding-left: 30px;
-		margin-top: 19px;
-
-
-   	}
-   	.search-box:focus{
-		outline: 0px;
-   	}
-   	.search-btn{
-		width: 120px;
-		height: 60px;
-		line-height: 60px;
-		color: #fff;
-		background-color: #55bb22;
-		border:2px solid #fff;
-		border-radius: 5px;
-		font-size: 30px;
-		float: right;
-		margin-right: 30px;
-		margin-top: 30px;
+        font-size: 0px;
+        float: left;
+        margin-left: 5px;
+        width: 65%;
+    }
+    .search-box {
+        font-size: 28px;
+        width: 100%;
+        height: 60px;
+        line-height: 80px;
+        border:1px solid #fff;
+        border-radius: 5px;
+        float: left;
+        margin-left: 30px;
+        padding-left: 30px;
+        margin-top: 30px;
+    }
+    .search-box:focus{
+        outline: 0px;
+    }
+    .search-jpg{
+        height: 35px;
+        width: 35px;
+        margin-left: -55px;
+        margin-top: 40px;
+    }
+    .index{
+        float: right;
+        margin-right: 30px;
+    }
+    .index-picture{
+        height: 60px;
+        width: 60px;
+        margin-top: 30px;
+    }
+  //  	.search-btn{
+		// width: 120px;
+		// height: 60px;
+		// line-height: 60px;
+		// color: #fff;
+		// background-color: #55bb22;
+		// border:2px solid #fff;
+		// border-radius: 5px;
+		// font-size: 30px;
+		// float: right;
+		// margin-right: 30px;
+		// margin-top: 30px;
 	
-   	}
-   	.search-btn:hover{
-   		cursor: pointer;
-   	}
-   	.search-btn:focus{
-		outline:2px solid #55bb22;
-   	}
+  //  	}
+  //  	.search-btn:hover{
+  //  		cursor: pointer;
+  //  	}
+  //  	.search-btn:focus{
+		// outline:2px solid #55bb22;
+  //  	}
 </style>
 

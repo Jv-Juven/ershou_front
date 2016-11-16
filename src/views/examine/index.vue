@@ -1,10 +1,10 @@
 <template>
-    <examine-header></examine-header>
+    <examine-header msgone="审核"></examine-header>
     <examine-contain></examine-contain>
 </template>
 
 <script type="text/javascript">
-    import ExamineHeader from "./components/header"
+    import ExamineHeader from "../../components/header"
     import ExamineContain from "./components/examine-contain"
         export default {
             data() {

@@ -1,10 +1,10 @@
 <template>
-    <collector-header></collector-header>
+    <collector-header msgone="我的收藏"></collector-header>
     <collector-list></collector-list>
 </template>
 
 <script type="text/javascript">
-    import CollectorHeader from "./components/header.vue"
+    import CollectorHeader from "../../components/header"
     import CollectorList from "./components/collector-list"
         export default {
             data() {

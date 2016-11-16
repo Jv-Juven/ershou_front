@@ -1,12 +1,12 @@
 <template>
-    <report-header></report-header>
+    <report-header msgone="举报"></report-header>
     <!-- 举报界面头部 -->
     <report-contain></report-contain>
     <!-- 举报界面主体 -->
 </template>
 
 <script type="text/javascript">
-    import ReportHeader from "./components/header.vue"
+    import ReportHeader from "../../components/header"
     import ReportContain from "./components/report-contain"
    
         export default {

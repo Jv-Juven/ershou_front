@@ -1,10 +1,10 @@
 <template>
-    <chat-header></chat-header>
+    <chat-header msgone="联系客服"></chat-header>
     <chat-contain></chat-contain>
 </template>
 
 <script type="text/javascript">
-    import ChatHeader from "./components/header"
+    import ChatHeader from "../../components/header"
     import ChatContain from "./components/chat-contain"
         export default {
             data() {

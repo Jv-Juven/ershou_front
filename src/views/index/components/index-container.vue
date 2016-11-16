@@ -40,7 +40,7 @@
 	.container{
 		width: 600px;
 		height: 500px;
-		margin: 50px auto;
+		margin: 60px auto;
 
 	}
 	.component{
@@ -52,18 +52,21 @@
 		margin-right: 0px;
 	}
 	.picture{
-		height: 160px ;
-		height: 160px;
+		height: 180px ;
+		height: 180px;
 		display: block;
 		margin: 20px auto;
+		cursor: pointer;
 	}
 	.component span{
-		width: 100px;
+		width: 150px;
 		height: 30px;
 		line-height: 30px;
 		display: block;
+		color:#55bb22;
 		text-align: center;
 		margin: -40px auto;
+		cursor: pointer;
 	}
 </style>
 
