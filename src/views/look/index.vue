@@ -1,12 +1,12 @@
 <template>
-    <look-header></look-header>
+    <look-header msgone="详细信息"></look-header>
     <look-contain></look-contain>
     <look-footer></look-footer>
     <look-seller></look-seller>
 </template>
 
 <script type="text/javascript">
-    import LookHeader from "./components/header.vue"
+    import LookHeader from "../../components/header"
     import LookContain from "./components/look-contain"
     import LookFooter from "./components/footer-button"
     import LookSeller from "./components/look-seller"

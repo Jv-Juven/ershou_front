@@ -1,10 +1,10 @@
 <template>
-    <participator-header></participator-header>
+    <participator-header msgone="信息登记"></participator-header>
     <participator-contain></participator-contain>
 </template>
 
 <script type="text/javascript">
-    import ParticipatorHeader from "./components/header"
+    import ParticipatorHeader from "../../components/header"
     import ParticipatorContain from "./components/participator-contain"
         export default {
             data() {

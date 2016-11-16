@@ -1,10 +1,10 @@
 <template>
-    <message-header></message-header>
+    <message-header msgone="我的留言"></message-header>
     <message-contain></message-contain>
 </template>
 
 <script type="text/javascript">
-    import MessageHeader from "./components/header"
+    import MessageHeader from "../../components/header"
     import MessageContain from "./components/message-contain"
         export default {
             data() {

@@ -15,7 +15,7 @@
             <input type="radio" name="number" class="hidden" id="fivehundred"></input>
             <label for="fivehundred">500分</label>
             <div class="random">
-                <input type="text" ></input><span>(请输入0-1000的整数)</span>
+                <input type="text"></input><span>(请输入0-1000的整数)</span>
             </div>
         <div>
             <input type="button" class="recharge-btn" value="充值" :disabled="able" :style='style' ></input>
@@ -109,7 +109,7 @@
     .random{
         margin-top: 50px;
         input{
-            width: 20%;
+            width: 130px;
             height: 40px;
             font-size: 20px;
             border:2px solid #999;

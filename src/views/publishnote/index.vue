@@ -1,5 +1,5 @@
 <template>
-    <publish-header></publish-header>
+    <publish-header msgone="发布帖子"></publish-header>
     <!-- 发布帖子头部 -->
     <publish-picture></publish-picture>
     <!-- 发布帖子图片 -->
@@ -14,7 +14,7 @@
 </template>
 
 <script type="text/javascript">
-    import PublishHeader from "./components/publish-header"
+    import PublishHeader from "../../components/header"
     import PublishPicture from "./components/publish-picture"
     import GoodsType from "./components/goods-type"
     import GoodsInfo from "./components/goods-info"

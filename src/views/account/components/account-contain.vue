@@ -3,7 +3,7 @@
     <div class="basic-info">
         <p>手机号：<span>18813750848</span></p>
         <p>学&nbsp;号：<span>2013081008</span></p>
-        <p>一卡通：<span>20026648</span></p>
+        <p>一卡通：<span>20026646</span></p>
     </div>
     <div class="detail-info">
         <p>用户名：one</p>

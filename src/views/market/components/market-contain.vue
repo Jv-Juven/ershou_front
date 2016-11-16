@@ -1,5 +1,5 @@
 <template lang="html">
-    <div></div>
+    <!-- <div style="clear:both;"> </div> -->
     <ul>
         <li v-for="item in items" >
         <a href="#">
@@ -39,9 +39,7 @@
     	},
     	computed: {},
     	// mounted() {},
-    	methods: {
-
-    	},
+    	methods: {},
     	components: {}
     }
 </script>

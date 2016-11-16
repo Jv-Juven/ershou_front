@@ -1,10 +1,10 @@
 <template>
-    <servers-header></servers-header>
+    <servers-header msgone="客服"></servers-header>
     <servers-contain></servers-contain>
 </template>
 
 <script type="text/javascript">
-    import ServersHeader from "./components/header.vue"
+    import ServersHeader from "../../components/header"
     import ServersContain from "./components/servers-contain"
         export default {
             data() {

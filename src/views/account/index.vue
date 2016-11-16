@@ -1,12 +1,13 @@
 <template>
-     <account-header></account-header>
+     <account-header msgone="账号信息"></account-header>
      <!-- 个人账户头部 -->
      <account-contain></account-contain>
      <!-- 个人账户信息主体 -->
 </template>
 
 <script type="text/javascript">
-     import AccountHeader from "./components/header"
+     //import AccountHeader from "./components/header"
+     import AccountHeader from "../../components/header"
      import AccountContain from "./components/account-contain"
         export default {
             data() {

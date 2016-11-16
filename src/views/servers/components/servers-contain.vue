@@ -56,18 +56,21 @@
 
 <style lang="less" media="screen" scoped>
     .servers{
+        clear: both;
         height: 80px;
         line-height: 80px;
         span{
-            color:#55bb22;
-            font-size: 26px;
-            margin-left: 30px;
+            color:#000;
+            font-size: 36px;
+            margin-left: 50px;
+            font-weight: bold;
         }
         input{
             float: right;
             width: 80px;
             height: 40px;
-            margin-right: 30px;
+            border-radius: 5px;
+            margin-right: 40px;
             font-size: 26px;
             background: #55bb22;
             color:#fff;
