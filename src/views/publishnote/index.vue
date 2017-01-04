@@ -1,5 +1,5 @@
 <template>
-    <publish-header msgone="发布帖子"></publish-header>
+    <!-- <publish-header msgone="发布帖子"></publish-header> -->
     <!-- 发布帖子头部 -->
     <publish-picture></publish-picture>
     <!-- 发布帖子图片 -->
@@ -11,15 +11,17 @@
     <!-- 发布帖子个人信息 -->
     <footer-button></footer-button>
     <!-- 发布帖子尾部按钮 -->
+    <publish-footer a="a" b="b" c="c" d="d"></publish-footer>
 </template>
 
 <script type="text/javascript">
-    import PublishHeader from "../../components/header"
+    //import PublishHeader from "../../components/header"
     import PublishPicture from "./components/publish-picture"
     import GoodsType from "./components/goods-type"
     import GoodsInfo from "./components/goods-info"
     import SellerInfo from "./components/seller-info"
     import FooterButton from "./components/footer-button"
+    import PublishFooter from "../../components/allfooter"
     import Publish from "../../vuex/store"//引入vuex中的publish的store
         export default {
             data() {
@@ -32,12 +34,13 @@
             },
             store:Publish,
             components: {
-               PublishHeader,
+               //PublishHeader,
                PublishPicture,
                GoodsType,
                GoodsInfo,
                SellerInfo,
                FooterButton,
+               PublishFooter,
             },
             
         }

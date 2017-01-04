@@ -1,62 +1,72 @@
 <template lang="html">
     <section>
-        <p class="tips">
-            请填写以下信息，方便我们及时为您提供服务
-        </p>
-        <div class="activity-info">
-            <div class="theme">
-                <span class="theme-left">活动主题</span>
-                <textarea placeholder="请输入活动主题"></textarea>
-                <span class="err">字数大于0小于60</span>
+        <h2>欢迎进入<span>{{school}}</span>义卖举办方专场</h2>
+        <p class="holder"><a v-link="{path:'index'}">外校入口</a></p>
+        <p class="holder"><a v-link="{path:'index'}">参与方入口</a></p>
+        <div class="new"><span>填写信息（请填写以下信息，方便我们联系您）</span></div>
+       <!--  <form method="POST">
+            <span class="caption">标题：</span>
+            <input type="text" name="caption" placeholder="qinsgh"  />
+            <input type="submit" name="submit" value="提交">
+        </form> -->
+        <div class="goodsinfo" >
+            <div class="caption">
+                <div class="caption-left">
+                   <span>主办方</span>
+                   
+                </div>
+                <div class="caption-right">
+                     <input placeholder="请填写主办方" ></input>
+                     <span :style="addressStyle">不能为空</span>
+                </div>
             </div>
-        </div>
-        <div class="activity-info">
-            <div class="theme">
-                <span class="theme-left">活动介绍</span>
-                <textarea placeholder="请输入活动介绍"></textarea>
-                <span class="err">字数大于0小于60</span>
+            <div class="caption">
+                <div class="caption-left">
+                    <span>联系人</span>
+                </div>
+                <div class="caption-right">
+                   <input placeholder="姓名" ></input>
+                   <span :style="nameStyle">不能为空，最多10字</span>
+                </div>
             </div>
-        </div>
-        <div class="activity-info">
-            <div class="theme">
-                <span class="theme-left">活动时间</span>
-                <input type="text" placeholder="请输入活动时间"></input>
-                <span class="err">注意格式</span>
+            <div class="price">
+               <div class="price-left">
+                   <span>联系电话</span>
+               </div>
+               <div class="price-right">
+                   <input type="text" placeholder="请输入手机号码" ></input>
+                   <span :style="numberStyle">请符合手机号码格式</span>
+               </div>
             </div>
-        </div>
-        <div class="activity-info">
-            <div class="theme">
-                <span class="theme-left">主办方</span>
-                <input type="text" placeholder="请输入主办方"></input>
-                <span class="err">必填</span>
+            
+            <div class="description">
+                <div class="description-left">
+                    <span>主题</span>
+                </div>
+                    <div class="description-right">
+                        <textarea placeholder="请输入描述内容" ></textarea>
+                        <span :style="descriptionStyle">描述字数大于0小于20</span>
+                    </div>
             </div>
-        </div>
-        <div class="activity-info">
-            <div class="theme">
-                <span class="theme-left">负责人</span>
-                <input type="text" placeholder="请输入负责人"></input>
-                <span class="err">必填</span>
+            <div class="price">
+               <div class="price-left">
+                   <span>活动时间</span>
+               </div>
+               <div class="price-right">
+                   <input type="text" placeholder="请填写活动时间" ></input>
+                   <span :style="numberStyle">请符合格式</span>
+               </div>
             </div>
-        </div>
-        <div class="activity-info">
-            <div class="theme">
-                <span class="theme-left">联系电话</span>
-                <input type="text" placeholder="请输入联系电话"></input>
-                <span class="err">注意格式11位数</span>
             </div>
-        </div>
-        <p class="check">验证资料，请拍照上传</p>
-        <div class="goods-picture">
-            <img src="../../../../static/image/photo.png" class="photo">
-            <div class="other-picture"></div>
-            <div class="other-picture"></div>
-            <div class="other-picture"></div>
-        </div>
+            
+           
         <div class="btn">
-            <input type="button" value="提交" class="btn btn-left" v-link="{ path:'/examine'}"></input>
-            <input type="button" value="重置" class="btn btn-right"></input>
+            <input type="button" value="提交" class="btn btn-left" />
+            <input type="button" value="重置" class="btn btn-right" />
         </div>
+        <div class="tianchong"></div>
     </section>
+
     
    
 </template>
@@ -64,7 +74,9 @@
 <script type="text/javascript">
         export default {
             data() {
-                    return {}
+                    return {
+                        school:'广州中医药大学',
+                    }
                 },
                 computed: {},
                 // mounted() {},
@@ -76,106 +88,220 @@
 
 <style lang="less" media="screen" scoped>
     section{
-        .tips{
-            text-indent: 30px;
-            color:red;
-            font-size: 30px;
+        margin-top: 40px;
+        a{
+            text-decoration: none;
+        }
+        h2{
+            font-size: 36px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            span{
+                color:#55bb22;
+                font-size: 36px;
+            }
+            a{
+                // display: inline-block;
+                // height: 30px;
+                // width: 160px;
+                // background-color: #55bb22;
+                color:red;
+                font-size: 24px;
+            }
+        }
+        .holder{
             margin-top: 20px;
-            margin-bottom: 40px;
         }
-        .theme{
-            
-            height: 100px;
-            border: 1px solid #999;
-            line-height: 100px;
-            position: relative;
-            font-size: 0px;
-            .theme-left{
-                color:#55bb22;
-                display: inline-block;
-                width: 20%;
-                height: 100px;
-                font-size: 26px;
-                text-align: center;
-                border-right: 1px solid #999;
-            }
-            textarea{
-                position: absolute;
-                // border:none;
-                font-size: 26px;
-                height: 98px;
-                width: 40%;
-                &:focus{
-                    outline: 0px;
-                }
-            }
-            input{
-                height: 96px;
-                width: 40%;
-                font-size: 26px;
-                &:focus{
-                    outline: 0px;
-                }
-            }
-            .err{
-                clear: both;
-                display: inline-block;
-                height: 98px;
-                line-height: 98px;
-                width: 40%;
-                text-align: center;
-                position: absolute;
-                font-size: 26px;
-                color:#55bb22;
-                right: 0px;
-            }
-        }
-        .goods-picture{
-            width: 100%;
-            height: 200px;
-            background-color: #F7F7F7;
+        .holder a{
+            font-size: 30px;
+            margin-left: 20px;
+            // margin-top: 10px;
+            color: red;
+            text-decoration: underline;
 
         }
-        .size{
-            width: 175px;
-            height: 175px;
+        .new{
+            margin-top: 30px;
+            height: 70px;
+            background-color: #eee;
+            line-height: 70px;
+            margin-bottom: 5px;
+            span{
+                font-size: 30px;
+                margin-left: 20px;
+            }
         }
-        .photo{
-            .size;
+        // form{
+        //     height: 600px;
+        //     // background-color: #eee;
+        //     input{
+        //         background-color: #bbffbb;
+        //     }
+        // }
+        // .goodsinfo{
+        //     background-color: #55bb22;
+        // }
+        .goodsinfo{
+            width: 100%;
+            height: 730px;
+            // border:1px solid #ccc;
+            // margin-top: 10px;
+        }
+        .left{
+            width: 20%;
             float: left;
-            margin-top: 12.5px;
-            margin-left: 15px;
-            margin-right: 15px;
+
+        
+
         }
-        .other-picture{
-            .size;
+        .right{
+            width: 79%;
+            
             float: left;
-            border:1px solid red;
-            margin-top: 12.5px;
+            
         }
-        .check{
-            color:#55bb22;
-            font-size: 26px;
+        .caption{
+            width: 100%;
+            height: 120px;
+            // border-bottom: 1px solid #999;
+            .caption-left{
+                .left;
+                height: 120px;
+                // border-right: 1px solid #999;
+                line-height: 120px;
+                text-align: center;
+                span{
+                    font-size: 26px;
+                    color: #55bb22;
+                }
+            }
+            .caption-right{
+                .right;
+                height: 120px;
+                line-height: 120px;
+                
+                input{
+                    // border:none;
+                    width: 50%;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 22px;
+                    border: 2px solid #55bb22;
+                    &:focus{
+                        outline: 0px;
+                    }
+                }
+                span{
+                    clear: both;
+                    // display: inline-block;
+                    // font-size: 22px;
+                    // width: 40%;
+                    // height: 40px;
+                    // position: absolute;
+                    color: #55bb22;
+                }
+            }
+        }
+        .price{
+            // margin-top: 10px;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            // margin-top: 10px;
+            // border-bottom: 1px solid #999;
+            .price-left{
+                .left;
+                height: 100px;
+                // border-right: 1px solid #999;
+                line-height: 100px;
+                text-align: center;
+                span{
+                    font-size: 26px;
+                    color: #55bb22;
+                }
+            }
+            .price-right{
+                .right;
+                height: 59px;
+                input{
+                    // border:none;
+                    width: 50%;
+                    height: 55px;
+                    border: 2px solid #55bb22;
+                    font-size: 22px;
+                    &:focus{
+                        outline: 0px;
+                    }
+                }
+                span{
+                    color:#55bb22;
+                }
+            }
+        }
+        .description{
             margin-top: 10px;
+            height: 120px;
+            line-height: 120px;
+            width: 100%;
+            .description-left{
+                .left;
+                height: 119px;
+                line-height: 119px;
+                text-align: center;
+                
+                span{
+                     font-size: 26px;
+                    color: #55bb22;
+                }
+            }
+            .description-right{
+                .right;
+                height: 120px;
+                line-height: 120px;
+                textarea{
+                    // border:none;
+                    width: 50%;
+                    height: 80px;
+                    line-height: 30px;
+                    font-size: 22px;
+                    border: 2px solid #55bb22;
+                    // border-bottom: 1px solid #999;
+                    &:focus{
+                        outline: 0px;
+                    }
+                }
+                span{
+                    // clear: both;
+                    // display: inline-block;
+                    // font-size: 22px;
+                    // width: 30%;
+                    // height: 40px;
+                    color: #55bb22;
+                    position: absolute;
+                }
+            }
         }
         .btn{
             width: 100%;
             height: 60px;
-            margin-top: 30px;
+            // margin-top: 30px;
             .btn{
-                    width: 130px;
-                    height: 40px;
+                    width: 230px;
+                    height: 60px;
                     background-color: #55bb22;
-                    font-size: 22px;
+                    font-size: 32px;
                     color: #fff;
                 }
                 .btn-left{
-                    margin-left: 200px;
+                    margin-left: 100px;
                 }
                 .btn-right{
                     float: right;
-                    margin-right: 200px;
+                    margin-right: 100px;
                 }
+        }
+        .tianchong{
+            height: 100px;
         }
     }
 </style>

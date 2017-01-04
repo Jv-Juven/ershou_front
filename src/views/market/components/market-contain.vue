@@ -1,10 +1,10 @@
 <template lang="html">
     <!-- <div style="clear:both;"> </div> -->
     <ul>
-        <li v-for="item in items" >
-        <a href="#">
+        <li v-for="item in items"  index="{{item.namevalue}}">
+        <a   @click="skip" >
             <img :src="item.src">
-            <span class="word">{{item.text}}</span>
+            <span class="word" >{{item.text}}</span>
             <span class="arrow">&gt;</span>
         </li>
         </a>
@@ -16,15 +16,16 @@
         export default {
             data() {
                     return {
+                        abc:'ddd',
                         items:[
-                            {src:'./static/image/market/phone.jpg',text:'手机'},
-                            {src:'./static/image/market/electrical.jpg',text:'家电'},
-                            {src:'./static/image/market/parts.jpg',text:'配件'},
-                            {src:'./static/image/market/sport.jpg',text:'运动'},
-                            {src:'./static/image/market/camera.jpg',text:'相机'},
-                            {src:'./static/image/market/accessory.jpg',text:'饰品'},
-                            {src:'./static/image/market/books.jpg',text:'书籍'},
-                            {src:'./static/image/market/other.jpg',text:'其他'},
+                            {src:'./static/image/market/phone.jpg',text:'手机',namevalue:'phone'},
+                            {src:'./static/image/market/electrical.jpg',text:'家电',namevalue:'phone'},
+                            {src:'./static/image/market/parts.jpg',text:'配件',namevalue:'phone'},
+                            {src:'./static/image/market/sport.jpg',text:'运动',namevalue:'phone'},
+                            {src:'./static/image/market/camera.jpg',text:'相机',namevalue:'phone'},
+                            {src:'./static/image/market/accessory.jpg',text:'饰品',namevalue:'phone'},
+                            {src:'./static/image/market/books.jpg',text:'书籍',namevalue:'book'},
+                            {src:'./static/image/market/other.jpg',text:'其他',namevalue:'phone'},
 
                         ],
                     }
@@ -32,7 +33,16 @@
                 computed: {},
                 // mounted() {},
                 methods: {
-                   
+                   skip:function(){
+                        //console.log(this)//获取的是el
+                        //console.log(event.currentTarget)//获取的是点击的节点
+                        var value=event.currentTarget.parentNode.getAttribute('index');
+                        var url="/goodslist?value="+value;
+                        this.$router.go(url)
+                        // var value=this.attr('index');
+                        // alert(value)
+
+                   }
                 },
                 components: {}
         }
@@ -66,6 +76,7 @@
                 position: absolute;
                 left:100px;
                 font-weight: bold;
+                font-size: 30px;
                 // display: inline-block;
                 // width: 80px;
                 // height: 40px;
@@ -75,6 +86,8 @@
             .arrow{
                 clear: both;
                 position: absolute;
+                font-size: 40px;
+                font-weight: bold;
                 right: 50px;
             }
         }

@@ -11,7 +11,7 @@
         <div class="swiper-button-next"></div>
     
         <!-- 如果需要滚动条 -->
-        <div class="swiper-scrollbar"></div>
+      <!--   <div class="swiper-scrollbar"></div> -->
     </div>
 
 
@@ -31,9 +31,9 @@
                 var swiper = new Swiper('.swiper-container',{
                     nextButton: '.swiper-button-next',
                     prevButton: '.swiper-button-prev',
-    
+                    autoplay : 3000,  //自动播放
                     // 如果需要滚动条
-                    scrollbar: '.swiper-scrollbar',
+                    //scrollbar: '.swiper-scrollbar',
                 });
             // let _this = this;
             // // 计算当前所有页面的总数

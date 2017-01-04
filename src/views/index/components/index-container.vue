@@ -1,29 +1,28 @@
 <template>
 	<div class="container">
-		<div class="component">
-			<img src="../../../../static/image/publishnote.gif"  class="picture" v-link="{path:'publish'}">
-			<span v-link="{path:'publish'}">发布帖子</span>
+		<div class="component clright">
+			<img src="../../../../static/image/indexfloat/activity.png"  class="picture" v-link="{path:'chooseactivity'}">
+			<span v-link="{path:'chooseactivity'}">活动</span>
 		</div>
 		<div class="component">
+			<img src="../../../../static/image/indexfloat/market.png"  class="picture" v-link="{path:'market'}">
+			<span v-link="{path:'market'}">商城</span>
+		</div>
+		<div class="component">
+			<img src="../../../../static/image/indexfloat/publishnote.png"  class="picture" v-link="{path:'publish'}">
+			<span v-link="{path:'publish'}">发帖</span>
+		</div>
+		<!-- <div class="component">
 			<img src="../../../../static/image/mynote.gif"  class="picture" v-link="{path:'mynote'}">
 			<span v-link="{path:'mynote'}">我的帖子</span>
-		</div>
+		</div> -->
 		<div class="component clright">
-			<img src="../../../../static/image/chat.gif"  class="picture" v-link="{path:'server'}">
-			<span v-link="{path:'server'}">联系客服</span>
+			<img src="../../../../static/image/indexfloat/chat.png"  class="picture" v-link="{path:'server'}">
+			<span v-link="{path:'server'}">客服</span>
 		</div>
-		<div class="component">
-			<img src="../../../../static/image/market.gif"  class="picture" v-link="{path:'market'}">
-			<span v-link="{path:'market'}">二手市场</span>
-		</div>
-		<div class="component">
-			<img src="../../../../static/image/setting.gif"  class="picture" v-link="{path:'setting'}">
-			<span v-link="{path:'setting'}">个人设置</span>
-		</div>
-		<div class="component clright">
-			<img src="../../../../static/image/report.gif"  class="picture" v-link="{path:'activity'}">
-			<span v-link="{path:'activity'}">义卖活动</span>
-		</div>
+		
+		
+		
 	</div>
 </template>
 
@@ -36,24 +35,25 @@
     }
 </script>
 
-<style lang="less" media="screen">
+<style lang="less" media="screen" scoped>
 	.container{
-		width: 600px;
-		height: 500px;
+		width: 100%;
+		// height: 500px;
 		margin: 60px auto;
+		overflow: auto;
 
 	}
 	.component{
-		width: 200px;
-		height: 250px;
+		width: 25%;
+		// height: 250px;
 		float: left;	
 	}
 	.clright{
 		margin-right: 0px;
 	}
 	.picture{
-		height: 180px ;
-		height: 180px;
+		width: 120px ;
+		height: 120px;
 		display: block;
 		margin: 20px auto;
 		cursor: pointer;
@@ -64,8 +64,9 @@
 		line-height: 30px;
 		display: block;
 		color:#55bb22;
+		font-size: 30px;
 		text-align: center;
-		margin: -40px auto;
+		margin: 0px auto;
 		cursor: pointer;
 	}
 </style>

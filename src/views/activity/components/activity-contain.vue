@@ -11,8 +11,8 @@
         </div>
         
         <div class="entrybox">
-            <input type="button" value="举办方入口" class="entry left" v-link="{path:'holder'}"></input>
-            <input type="button" value="参与方入口" class="entry" v-link="{path:'participator'}"></input>
+            <input type="button" value="举办方入口" class="entry left" v-link="{path:'schoolholder'}"></input>
+            <input type="button" value="参与方入口" class="entry" v-link="{path:'schoolparticipator'}"></input>
         </div>
        
    </div>
@@ -34,7 +34,7 @@
 
 <style lang="less" media="screen" scoped>
     .contain{
-        margin:20px auto;
+        margin:50px auto;
         word-break:break-all;
         word-wrap:break-word;
         p{

@@ -1,29 +1,32 @@
 <template>
-    <look-header msgone="详细信息"></look-header>
+    <!-- <look-header msgone="详细信息"></look-header> -->
     <look-contain></look-contain>
     <look-footer></look-footer>
     <look-seller></look-seller>
+    <look-footer a="a" b="b" c="c" d="d"></look-footer>
 </template>
 
 <script type="text/javascript">
-    import LookHeader from "../../components/header"
+    //import LookHeader from "../../components/header"
     import LookContain from "./components/look-contain"
-    import LookFooter from "./components/footer-button"
+    import LookFooterBtn from "./components/footer-button"
     import LookSeller from "./components/look-seller"
+    import LookFooter from "../../components/allfooter"
         export default {
             data() {
                 return {}
             },
             components: {
 
-                LookHeader,
+                //LookHeader,
                 LookContain,
-                LookFooter,
+                LookFooterBtn,
                 LookSeller,
+                LookFooter,
             },
             route: {
                 data() {
-                   console.log("router--->data");
+                   // console.log("router--->data");
                 }
             },
             ready() {

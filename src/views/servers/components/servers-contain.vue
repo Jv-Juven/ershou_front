@@ -1,43 +1,43 @@
 <template lang="html">
     <div class="servers">
         <span>广中医客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
-    </div>
-    <div class="servers">
-        <span>广外客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=1'}"></input>
     </div>
     <div class="servers">
         <span>广药客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=2'}"></input>
     </div>
     <div class="servers">
         <span>华工客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=3'}"></input>
     </div>
     <div class="servers">
         <span>中大客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
-    </div>
-    <div class="servers">
-        <span>华师客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=4'}"></input>
     </div>
     <div class="servers">
         <span>星海客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=5'}"></input>
     </div>
     <div class="servers">
         <span>广美客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=6'}"></input>
+    </div>
+    <div class="servers">
+        <span>华师客服</span>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=7'}"></input>
     </div>
     <div class="servers">
         <span>广大客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=8'}"></input>
     </div>
     <div class="servers">
         <span>广工客服</span>
-        <input type="button" value="留言" v-link="{path:'chatserver'}"></input>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=9'}"></input>
+    </div>
+    <div class="servers">
+        <span>广外客服</span>
+        <input type="button" value="留言" v-link="{path:'chatserver?server=10'}"></input>
     </div>
 </template>
 

@@ -173,7 +173,7 @@
 		SETSELLERSTATETWOFALSE:function(state){
 			state.publish.sellerStateTwo=false;
 		},
-		SETSELLERSTATETHREETRUE:function(state,value){
+		SETSELLERSTATETHREETRUE:function(state){
 			state.publish.sellerStateThree=true;
 		},
 		SETSELLERSTATETHREEFALSE:function(state){

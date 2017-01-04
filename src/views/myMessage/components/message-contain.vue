@@ -1,71 +1,16 @@
 <template lang="html">
     <section>
         <div class="title">
-            <p>收到留言:</p>
+            <p>我的建议:</p>
         </div>
-        <div class="chatter">
+        <div class="chatter" v-for="item in items" @click="skip" index="{{item.messageNum}}">
             <img src="../../../../static/image/headpicture.png">
            <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userOne}}</span>
-            <span class="messgae">{{dataOne}}</span>
+            <span class="username">{{item.userOne}}</span>
+            <span class="messgae">{{item.dataOne}}</span>
         </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
-        <div class="title">
-            <p>发出留言:</p>
-        </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
-        <div class="chatter">
-            <img src="../../../../static/image/headpicture.png">
-           <!--  <p class="user">用户：</p> -->
-            <span class="username">{{userTwo}}</span>
-            <span class="messgae">{{dataTwo}}</span>
-        </div>
+        
+        <div class="footer"></div>
     </section>
 </template>
 
@@ -73,16 +18,22 @@
         export default {
             data() {
                     return {
-                        userOne:'357448012@qq.com',
-                        dataOne:'该商品最低价位多少呢？',
-                        userTwo:'123456@qq.com',
-                        dataTwo:'什么时候有空交易？'
+                        items:[
+                        {userOne:'2017-1-3',dataOne:'您对华工客服留言',messageNum:'1'},
+                        {userOne:'2017-1-3',dataOne:'您对广中医客服留言',messageNum:'2'}
+                        ],
+                        
                     }
                 },
                 computed: {},
                 // mounted() {},
                 methods: {
-                   
+                   skip:function () {
+                       // console.log(event.currentTarget)
+                       var messageNum=event.currentTarget.getAttribute('index');
+                       var url='/mymessagedetail?messageNum='+messageNum;
+                       this.$router.go(url)
+                   }
                 },
                 components: {}
         }
@@ -98,6 +49,7 @@
             height: 60px;
             line-height: 60px;
             margin-left: 30px;
+            margin-top: 30px;
         }
         .chatter{
             height: 120px;
@@ -129,6 +81,9 @@
                 bottom: 25px;
                 left: 160px;
             }
+        }
+        .footer{
+            height: 100px;
         }
     }
 

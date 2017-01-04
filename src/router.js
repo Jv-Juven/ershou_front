@@ -1,6 +1,7 @@
 import Index from "views/index"
 import Search from "views/search"
-import Publish from "views/publishNote"
+//import Publish from "views/publishNote"//之前的发布帖子的界面
+import Publish from "views/publish"//现在的发布帖子的界面
 import Mynote from "views/mynote"
 import Setting from "views/selfSetting"
 import Account from "views/account"
@@ -20,6 +21,16 @@ import Participator from "views/participator"
 import Holder from "views/holder"
 import Examine from "views/examine"
 import PublishMessage from "views/publishMessage"
+import ChooseActivity from "views/chooseActivity"
+import Donation from "views/donation"
+import DonationHolder from "views/donationHolder"
+import DonationParticipator from "views/donationParticipator"
+import SchoolHolder from "views/schoolHolder"
+import SchoolParticipator from "views/schoolParticipator"
+import SchoolDonation from "views/schoolDonation"
+import SchoolDonator from "views/schoolDonator"
+import GoodsList from "views/goodsList"
+import MyMessageDetail from "views/myMessageDetail"
 
 export default function (router) {
     router.map({
@@ -68,6 +79,9 @@ export default function (router) {
         "/mymessage":{
             component:MyMessage
         },
+        "mymessagedetail":{
+            component:MyMessageDetail
+        },
         "/market":{
             component:Market
         },
@@ -88,6 +102,33 @@ export default function (router) {
         },
         "/publishmessage":{
             component:PublishMessage
+        },
+        "chooseactivity":{
+            component:ChooseActivity
+        },
+        "donation":{
+            component:Donation
+        },
+        "donationholder":{
+            component:DonationHolder
+        },
+        "donationparticipator":{
+            component:DonationParticipator
+        },
+        "schoolparticipator":{
+            component:SchoolParticipator
+        },
+        "schoolholder":{
+            component:SchoolHolder
+        },
+        "schooldonation":{
+            component:SchoolDonation
+        },
+        "schooldonator":{
+            component:SchoolDonator
+        },
+        "goodslist":{
+            component:GoodsList
         },
         "*": {
             component: Index

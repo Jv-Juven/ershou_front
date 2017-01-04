@@ -1,8 +1,8 @@
 <template lang="html">
    <header class="publish-header">
-       <span class="header-left" v-link="{path:'activity'}">&lt;</span>
-       <span class="header-right">信息登记</span>
-       <input type="button" value="首页" class="login-btn" v-link="{path:'index'}"></input>
+       <span class="header-left" v-link="{path:'setting'}">&lt;</span>
+       <span class="header-right">我的留言</span>
+       <input type="button" value="首页" class="index-btn" v-link="{path:'index'}"></input>
    </header>
 </template>
 
@@ -52,7 +52,7 @@
 
         
     }
-    .login-btn{
+    .index-btn{
         width: 120px;
         height: 60px;
         line-height: 60px;
@@ -66,10 +66,10 @@
         margin-top: 30px;
     
     }
-    .login-btn:hover{
+    .index-btn:hover{
         cursor: pointer;
     }
-    .login-btn:focus{
+    .index-btn:focus{
         outline:2px solid #55bb22;
     }
 </style>
