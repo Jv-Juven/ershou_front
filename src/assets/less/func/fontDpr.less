@@ -1,0 +1,9 @@
+.font-dpr(@font_size: 14px) {
+    font-size: @font_size; /*no*/
+    [data-dpr="2"] & {
+        font-size: @font_size * 2; /*no*/
+    }
+    [data-dpr="3"] & {
+        font-size: @font_size * 3; /*no*/
+    }
+}

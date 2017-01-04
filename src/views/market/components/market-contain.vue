@@ -8,7 +8,7 @@
             <span class="arrow">&gt;</span>
         </li>
         </a>
-        
+
     </ul>
 </template>
 
@@ -50,12 +50,11 @@
 </script>
 
 <style lang="less" media="screen" scoped>
-    ul{
-        list-style: none;
-        clear: both;
-        li{
-            height: 100px;
-            line-height: 100px;
+ul {
+    list-style: none;
+    li {
+        height: 80px;
+        line-height: 80px;
 
             border-bottom: 1px solid #999;
             position: relative;
@@ -90,8 +89,8 @@
                 font-weight: bold;
                 right: 50px;
             }
-        }
+
+
     }
-
+}
 </style>
-
