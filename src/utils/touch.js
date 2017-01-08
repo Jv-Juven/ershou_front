@@ -1,11 +1,17 @@
 // import {} from "./index"
+/**
+ * 向下拉动函数
+ * @param [object] el dom元素
+ * @param [object] fns 返回promise对象的函数对象集合：resolveFn--->可执行事件；loadingFn--->加载事件
+ * @type {[type]}
+ */
 export const pullDown = (el, fns) => {
     fns = fns || {
-        // 必须返回Promise
+        // 可执行事件，必须返回Promise
         resolveFn() {
             return new Promise( (resolve, reject) => { console.log("something must do!"); resolve(); });
         },
-        // 必须返回Promise
+        // 加载事件，必须返回Promise，
         loadingFn() {
             return new Promise( (resolve, reject) => { setTimeout( () => { resolve(); }, 3000); });
         }
@@ -15,6 +21,7 @@ export const pullDown = (el, fns) => {
         elOffsetY = 0,
         startY = 0,
         resolveFn = fns.resolveFn, // 可执行事件
+        resolveLock = 0, // 可执行事件锁
         loadingFn = fns.loadingFn; // 加载事件
 
     let thresoldVal = 100;
@@ -36,7 +43,8 @@ export const pullDown = (el, fns) => {
             elOffsetY = thresoldVal + (elOffsetY - thresoldVal)/10;
         }
         // 达到 可执行事件阈值 执行的函数
-        if (elOffsetY >= resolveVal) {
+        if (elOffsetY >= resolveVal && resolveLock == 0) {
+            resolveLock = 1;
             resolveFn();
         }
         el.style.webkitTransform = `translate3d(0, ${elOffsetY}px, 0)`;
@@ -55,6 +63,8 @@ export const pullDown = (el, fns) => {
             totalOffsetY = 0;
             console.log(resolveVal);
         }
+
+        resolveLock = 0;
     }
     el.addEventListener("touchstart", touchStartFn);
     el.addEventListener("touchmove", touchMoveFn);
