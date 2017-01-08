@@ -25,6 +25,7 @@ module.exports = {
 			'static': path.resolve(__dirname, '../static'),
 			'data': path.resolve(__dirname, '../src/vuex'),
 			'util': path.resolve(__dirname, '../src/utils'),
+			'vueAttributes': path.resolve(__dirname, '../src/vueAttributes')
 		}
 	},
 	resolveLoader: {

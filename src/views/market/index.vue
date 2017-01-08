@@ -1,7 +1,7 @@
 <template>
     <!-- <market-header msgone="二手市场"></market-header> -->
     <market-search></market-search>
-    <market-contain></market-contain>
+    <market-contain v-pull-down></market-contain>
     <market-footer a="a" b="b" d="d"></market-footer>
 </template>
 
@@ -10,6 +10,8 @@
     import MarketSearch from "../../components/search-top"
     import MarketContain from "./components/market-contain"
     import MarketFooter from "../../components/allfooter.vue"
+    // vue
+    import directives from "vueAttributes/directives"
         export default {
             data() {
                 return {}
@@ -22,11 +24,12 @@
                 MarketFooter,
             },
             route: {
-                
+
             },
             ready() {
-               
-            }
+
+            },
+            directives: directives
         }
 
 </script>
